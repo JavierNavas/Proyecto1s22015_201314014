@@ -13,7 +13,6 @@ public class Administrador {
     int id;
     String correo;
     String contra;
-    Comparable dato;
     int fe;
     Administrador hijoIzquierdo;
     Administrador hijoDerecho;
