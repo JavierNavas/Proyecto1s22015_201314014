@@ -16,6 +16,10 @@ public class ArbolAdmin {
     public ArbolAdmin() {
       this.raiz=null;
     }
+
+    public Administrador getRaiz() {
+        return raiz;
+    }
     //Metodo Buscar
     public Administrador buscar(String contra, Administrador r){
         numero= tamaContra(contra);
@@ -83,4 +87,87 @@ public class ArbolAdmin {
          aux=rotarIzquierda(x);
          return aux;
      }
+     
+     //Balanceamiento
+     public Administrador insertarAVL(Administrador nuevo,Administrador subarbol){
+         Administrador NuevoPadre=subarbol;
+         if(nuevo.id<subarbol.id){
+             if(subarbol.hijoIzquierdo==null){
+                 subarbol.hijoIzquierdo=nuevo;
+             }else{
+                 subarbol.hijoIzquierdo=insertarAVL(nuevo,subarbol.hijoIzquierdo);
+                 if((obtenerFE(subarbol.hijoIzquierdo)-obtenerFE(subarbol.hijoDerecho))==2){
+                     if(nuevo.id<subarbol.hijoIzquierdo.id){
+                         NuevoPadre=rotarIzquierda(subarbol);
+                     }else{
+                          NuevoPadre=rotarDobleizquierda(subarbol);
+                     }
+                 }
+             }
+         }else if (nuevo.id>subarbol.id){
+             if(subarbol.hijoDerecho==null){
+                 subarbol.hijoDerecho=nuevo;
+             }else{
+                 subarbol.hijoDerecho=insertarAVL(nuevo,subarbol.hijoDerecho);
+                if((obtenerFE(subarbol.hijoDerecho)-obtenerFE(subarbol.hijoIzquierdo))==2){
+                    if(nuevo.id>subarbol.hijoDerecho.id){
+                        NuevoPadre=rotarDerecha(subarbol);
+                    }else{
+                        NuevoPadre=rotarDoblederecha(subarbol);
+                    }
+                }
+             }
+         }else{
+             System.out.println("Nodo duplicado no se puede Ingresar");
+         }
+       //acutalizar FE
+       if((subarbol.hijoIzquierdo==null)&&(subarbol.hijoDerecho!=null)){
+           subarbol.fe=subarbol.hijoDerecho.fe+1;
+       }else if((subarbol.hijoDerecho==null)&&(subarbol.hijoIzquierdo!=null)){
+           subarbol.fe=subarbol.hijoIzquierdo.fe+1;
+       }else{
+           subarbol.fe=Math.max(obtenerFE(subarbol.hijoIzquierdo), obtenerFE(subarbol.hijoDerecho))+1;
+       }
+       return NuevoPadre;
+     }
+     //inserta un nodo nuevo
+      public void insertar(String correo,String contra){
+          Administrador nuevo= new Administrador(correo,contra);
+          if(raiz==null){
+              raiz=nuevo;
+          }else{
+              raiz=insertarAVL(nuevo,raiz);
+          }
+      }
+      
+      //Recorrer arbol
+      public void recorrerInOrden(Administrador x){
+          if(x!=null){
+              recorrerInOrden(x.hijoIzquierdo);
+              System.out.print(x.correo+", ");
+              recorrerInOrden(x.hijoDerecho);
+          }else{
+              System.out.println("Termine");
+          }
+      }
+      public void recorrerPreOrden(Administrador x){
+          if(x!=null){
+           System.out.print(x.correo+", ");
+           recorrerPreOrden(x.hijoIzquierdo);
+           recorrerPreOrden(x.hijoDerecho);
+          }else{
+              System.out.println("Termine");
+          }
+      }
+      
+      public void recorrerPostOrden(Administrador x){
+          if(x!=null){
+           recorrerPostOrden(x.hijoIzquierdo);
+           recorrerPostOrden(x.hijoDerecho);
+           System.out.print(x.correo+", ");
+          }else{
+              System.out.println("Termine");
+          }
+      }
+     
 }
