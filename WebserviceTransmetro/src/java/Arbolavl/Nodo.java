@@ -11,6 +11,12 @@ package Arbolavl;
  */
 public class Nodo {
      public static void main(String[] args) {
-         System.out.println("hola");
+         ArbolAdmin arbol = new ArbolAdmin();
+         arbol.insertar("javier", "sda");
+         arbol.insertar("navarro", "adas");
+         arbol.insertar("n", "adas");
+         arbol.insertar("noooooooo", "adas");
+         arbol.insertar("o", "adas");
+         arbol.recorrerPostOrden(arbol.getRaiz());
      }
 }

@@ -22,7 +22,7 @@ public class Administrador {
         this.contra=contra;
         this.hijoDerecho=null;
         this.hijoIzquierdo=null;
-        this.id=tamaContra(contra);
+        this.id=tamaContra(correo);
     }
     private int tamaContra(String dato){
         int c=0;

@@ -147,7 +147,7 @@ public class ArbolAdmin {
               System.out.print(x.correo+", ");
               recorrerInOrden(x.hijoDerecho);
           }else{
-              System.out.println("Termine");
+              System.out.print("");
           }
       }
       public void recorrerPreOrden(Administrador x){
@@ -156,7 +156,7 @@ public class ArbolAdmin {
            recorrerPreOrden(x.hijoIzquierdo);
            recorrerPreOrden(x.hijoDerecho);
           }else{
-              System.out.println("Termine");
+              System.out.print("");
           }
       }
       
@@ -166,7 +166,7 @@ public class ArbolAdmin {
            recorrerPostOrden(x.hijoDerecho);
            System.out.print(x.correo+", ");
           }else{
-              System.out.println("Termine");
+              System.out.print("");
           }
       }
      
