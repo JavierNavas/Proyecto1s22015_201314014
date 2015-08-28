@@ -169,5 +169,76 @@ public class ArbolAdmin {
               System.out.print("");
           }
       }
+      
+      //metodo Eliminar
+     public boolean eliminar(String contra){
+        numero= tamaContra(contra);
+        if (raiz == null)
+	{
+             System.out.println("Esta vacio");
+	      return false;  
+        }else{
+           Administrador aux=raiz;
+           Administrador padre = raiz;
+           boolean esHijoIzq=true;
+           while(aux.id!=numero){
+            padre=aux;
+             if(numero==raiz.id){
+                 
+             }
+             else if(numero<aux.id){//se debe ir por la izquierda
+                 esHijoIzq=true;
+                 aux=aux.hijoIzquierdo;
+             }else{
+                 esHijoIzq=false;
+                 aux=aux.hijoDerecho;
+             }
+             
+             if(aux==null){
+                 System.out.println("No se encontro");
+                 return false;
+             }
+           }//fin de while
+           if((aux.hijoIzquierdo==null) && (aux.hijoDerecho==null)){//significa que es hoja
+               if(aux==raiz){
+                   raiz=null;
+               }else if(esHijoIzq){
+                   padre.hijoIzquierdo=null;
+               }
+               else{
+                   padre.hijoDerecho= null;
+               }
+           }else if(aux.hijoDerecho==null){
+               if(aux==raiz){
+                   raiz=aux.hijoIzquierdo;
+               }else if(esHijoIzq){
+                   padre.hijoIzquierdo=aux.hijoIzquierdo;
+               }
+               else{
+                   padre.hijoDerecho= aux.hijoIzquierdo;
+               }
+           }else if(aux.hijoIzquierdo==null){
+                if(aux==raiz){
+                   raiz=aux.hijoDerecho;
+               }else if(esHijoIzq){
+                   padre.hijoIzquierdo=aux.hijoDerecho;
+               }
+               else{
+                   padre.hijoDerecho= aux.hijoIzquierdo;
+               }
+           }else{
+               Administrador remplazo= obtenerNodoReemplazo(aux);
+               if(aux==raiz){
+                   raiz=remplazo;
+               }else if(esHijoIzq){
+                   padre.hijoIzquierdo=remplazo;
+               }else{
+                   padre.hijoDerecho=remplazo;
+               }
+               remplazo.hijoIzquierdo=aux.hijoIzquierdo;
+           }
+           return true;
+        }
+     }
      
 }
