@@ -24,6 +24,6 @@ public class Nodo {
          arbol.eliminar("javier");
          System.out.println("");
          arbol.recorrerInOrden(arbol.getRaiz());
-          System.out.println(arbol.buscar("navarro",arbol.getRaiz()).contra);
+          System.out.println(arbol.buscar("o",arbol.getRaiz()).contra);
      }
 }

@@ -231,6 +231,8 @@ public class ArbolAdmin {
       } else {
       r = sucesor(q);
       q.id = r.id;
+      q.contra=r.contra;
+      q.correo=r.correo;
      }
   
      Administrador p;
