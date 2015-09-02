@@ -18,6 +18,12 @@ public class Nodo {
          arbol.insertar("noooooooo", "adas");
          arbol.insertar("o", "adasf");
          arbol.recorrerPostOrden(arbol.getRaiz());
+         System.out.println("");
+         arbol.recorrerInOrden(arbol.getRaiz());
          System.out.println(arbol.buscar("navarro",arbol.getRaiz()).contra);
+         arbol.eliminar("javier");
+         System.out.println("");
+         arbol.recorrerInOrden(arbol.getRaiz());
+          System.out.println(arbol.buscar("navarro",arbol.getRaiz()).contra);
      }
 }

@@ -16,12 +16,14 @@ public class Administrador {
     int fe;
     Administrador hijoIzquierdo;
     Administrador hijoDerecho;
+    Administrador padre;
     public Administrador(String correo,String contra) {
         this.fe = 0;
         this.correo=correo;
         this.contra=contra;
         this.hijoDerecho=null;
         this.hijoIzquierdo=null;
+        this.padre=null;
         this.id=tamaContra(correo);
     }
     private int tamaContra(String dato){
