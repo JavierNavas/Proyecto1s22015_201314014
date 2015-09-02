@@ -22,6 +22,7 @@ public class Nodo {
          arbol.recorrerInOrden(arbol.getRaiz());
          System.out.println(arbol.buscar("navarro",arbol.getRaiz()).contra);
          arbol.eliminar("javier");
+         arbol.Modificar("o", "jajajja", arbol.getRaiz());
          System.out.println("");
          arbol.recorrerInOrden(arbol.getRaiz());
           System.out.println(arbol.buscar("o",arbol.getRaiz()).contra);

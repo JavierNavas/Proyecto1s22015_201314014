@@ -322,6 +322,22 @@ public class ArbolAdmin {
         }
         
     }
+      
+     public Administrador Modificar(String contra,String con, Administrador r){
+        numero= tamaContra(contra);
+        if(raiz==null){
+            return null;
+        }else if(r.id==numero){
+            r.contra=con;
+            return r;
+        }
+        else if(r.id<numero){
+            return Modificar(contra,con,r.hijoDerecho);
+        }else{
+            return Modificar(contra,con,r.hijoIzquierdo);
+        }
+        
+    }
     //Metodo Buscar
     /*public Administrador buscar(String contra, Administrador r){
         numero= tamaContra(contra);
