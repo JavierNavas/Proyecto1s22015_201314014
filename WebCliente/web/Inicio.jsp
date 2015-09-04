@@ -127,162 +127,21 @@
    <!-- Portfolio
    ================================================== -->
    <section id="portfolio">
-
-      <div class="row section-head">
-
-      	<div class="twelve columns">
-
-	         <h1>Our Latest Works<span>.</span></h1>
-
-	         <hr />
-
-	         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
-	         eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-	         voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-	         </p>
-
-	      </div>
-
-      </div>
-
-      <div class="row items">
-
-      	<div class="twelve columns">
-
-            <div id="portfolio-wrapper" class="bgrid-fourth s-bgrid-third mob-bgrid-half group">
-
-          	   <div class="bgrid item">
-                  <div class="item-wrap">
-
-                     <a href="portfolio.html">
-                        <img src="images/portfolio/grizzly.jpg" alt="Grizzly">
-                        <div class="overlay"></div>                       
-                        <div class="portfolio-item-meta">
-          					      <h5>Grizzly</h5>
-                              <p>Photography</p>
-          					</div>                         
-                     </a>
-
-                  </div>
-          		</div> <!-- /item -->
-
-               <div class="bgrid item">
-                  <div class="item-wrap">
-
-                     <a href="portfolio.html">
-                        <img src="images/portfolio/hotel.jpg" alt="Hotel Sign">
-                        <div class="overlay">
-                        	<div class="portfolio-item-meta">
-          					      <h5>Hotel Sign</h5>
-                              <p>Webdesign</p>
-          					   </div>
-                        </div>                        
-                     </a>
-
-                  </div>
-          		</div> <!-- /item -->
-
-               <div class="bgrid stack item">
-                  <div class="item-wrap">
-
-                     <a href="portfolio.html">
-                        <img src="images/portfolio/beetle.jpg" alt="Beetle">                        
-                        <div class="overlay">
-                        	<div class="portfolio-item-meta">
-          					      <h5>Beetle</h5>
-                              <p>Branding</p>
-          					   </div>
-                        </div>                        
-                     </a>
-
-                  </div>
-          		</div> <!-- /item -->
-
-               <div class="bgrid item">
-                  <div class="item-wrap">
-
-                     <a href="portfolio.html">
-                        <img src="images/portfolio/banjo-player.jpg" alt="Banjo Player">
-                        <div class="overlay">
-                        	<div class="portfolio-item-meta">
-          					      <h5>Banjo Player</h5>
-                              <p>Videography</p>
-          					   </div>
-                        </div>                       
-                     </a>
-
-                  </div>
-          		</div> <!-- /item -->
-
-               <div class="bgrid item">
-                  <div class="item-wrap">
-
-                     <a href="portfolio.html">
-                     	<img src="images/portfolio/coffee.jpg" alt="Coffee Cup">
-                       	<div class="overlay">
-                       		<div class="portfolio-item-meta">
-          					      <h5>Coffee Cup</h5>
-                              <p>Photography</p>
-          					   </div>
-                       	</div>                        
-                     </a>
-
-                  </div>
-          		</div> <!-- /item -->
-
-               <div class="bgrid item">
-                  <div class="item-wrap">
-
-                     <a href="portfolio.html">
-                        <img src="images/portfolio/farmerboy.jpg" alt="Farmerboy">
-                        <div class="overlay">
-                        	<div class="portfolio-item-meta">
-          					      <h5>Farmerboy</h5>
-                              <p>Branding</p>
-          					   </div>
-                        </div>                        
-                     </a>
-
-                  </div>
-          		</div> <!-- /item -->
-
-               <div class="bgrid item">
-                  <div class="item-wrap">
-
-                     <a href="portfolio.html">                        
-                        <img src="images/portfolio/judah.jpg" alt="Judah">                       
-                        <div class="overlay">
-                        	<div class="portfolio-item-meta">
-          					      <h5>Judah</h5>
-                              <p>Web Design</p>
-          					   </div>
-                        </div>                        
-                     </a>
-
-                  </div>
-          		</div> <!-- /item -->
-
-               <div class="bgrid item">
-                  <div class="item-wrap">
-
-                     <a href="portfolio.html">
-                        <img src="images/portfolio/embossed-paper.jpg" alt="Embossed Paper">
-                        <div class="overlay">
-                        	<div class="portfolio-item-meta">
-          					      <h5>Embossed Paper</h5>
-                              <p>Branding</p>
-          					   </div>
-                        </div>                                                
-                     </a>                   
-
-                  </div>
-          		</div>  <!-- item end -->
-
-            </div> <!-- /portfolio-wrapper -->
-
-         </div> <!-- /twelve -->
-
-      </div>  <!-- /row -->
+       
+       <div class="row form-section">
+           <div id="contact-form" class="twelve columns">
+                <div class="row" align="center" >
+                    <h1>Modulo de Administrador</h1>
+                    <hr />
+                     <div class="six columns mob-whole">               	
+                            <input type="text" placeholder="Correo Electronico " size="35"/>
+                     </div>
+                     <div class="six columns mob-whole">  
+                            <input type="password" placeholder="password" size="35"/>
+                     </div>
+               </div>
+           </div>
+       </div>  
       
    </section> <!-- /Portfolio -->
 
