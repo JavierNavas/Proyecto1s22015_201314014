@@ -10,5 +10,23 @@ package Arbolavl;
  * @author javier
  */
 public class Bus {
-    
+        Bus siguiente;
+	Bus anterior;
+	int id;
+
+    public Bus(int id) {
+        this.siguiente =null;
+        this.anterior =null;
+        this.id = id;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+        
+        
 }
