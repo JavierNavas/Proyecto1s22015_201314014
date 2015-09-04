@@ -5,6 +5,7 @@
  */
 package Transmetro;
 
+import Arbolavl.ArbolAdmin;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
@@ -15,12 +16,22 @@ import javax.jws.WebParam;
  */
 @WebService(serviceName = "ControlTransmetro")
 public class ControlTransmetro {
-
+   ArbolAdmin admin = new ArbolAdmin();
     /**
      * This is a sample web service operation
      */
     @WebMethod(operationName = "hello")
     public String hello(@WebParam(name = "name") String txt) {
         return "Hello " + txt + " !";
+    }
+
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "AgregarAdministrador")
+    public String AgregarAdministrador(@WebParam(name = "correo") String correo, @WebParam(name = "contra") String contra) {
+          admin.insertar(correo,contra);
+          String mensaje ="se ha ingresado correctamente";
+        return mensaje;
     }
 }
