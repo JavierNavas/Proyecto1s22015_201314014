@@ -64,10 +64,11 @@
 	         <ul id="nav" class="nav">
 	            <li class="current"><a class="smoothscroll" href="#hero">Inicio.</a></li>
 		         <li><a class="smoothscroll" href="#portfolio">Administrador.</a></li>
-	            <li><a class="smoothscroll" href="#services">Pilotos.</a></li>
-	            <li><a class="smoothscroll" href="#about">Buses.</a></li>
-	            <li><a class="smoothscroll" href="#journal">Blog.</a></li>	            
-	            <li><a class="smoothscroll" href="#contact">Contact.</a></li>
+	            <li><a class="smoothscroll" href="#services">Estacion Clave.</a></li>
+	            <li><a class="smoothscroll" href="#about">Estacion General.</a></li>
+	            <li><a class="smoothscroll" href="#journal">Chofer.</a></li>	            
+	            <li><a class="smoothscroll" href="#contact">Bus.</a></li>
+                     <li><a class="smoothscroll" href="#contact">Ruta.</a></li>
 	         </ul> 
 
 	      </nav> <!-- /nav-wrap -->	      
@@ -140,6 +141,30 @@
                             <input type="password" placeholder="password" size="35"/>
                      </div>
                </div>
+               
+               <div class="row" align="center">
+                     <button class="button">Agregar Administrador</button>
+                     <div id="image-loader">
+                        <img src="images/loader.gif" alt="">
+                     </div>     
+                     
+                     <button class="button">Modificar Administrador</button>
+                     <div id="image-loader">
+                        <img src="images/loader.gif" alt="">
+                     </div>  
+                     
+                  </div>
+            
+                <div class="row" align="center" >
+                     <div class="six columns mob-whole">               	
+                            <input type="text" placeholder="Correo Electronico " size="35"/>
+                     </div>
+                    <button class="button">Eliminar Administrador</button>
+                     <div id="image-loader">
+                        <img src="images/loader.gif" alt="">
+                     </div>
+                    
+                </div>
            </div>
        </div>  
       
