@@ -12,6 +12,7 @@ package Arbolavl;
 public class ArbolAdmin {
     private Administrador raiz;
     int numero;
+    int numero2;
     
     public ArbolAdmin() {
       this.raiz=null;
@@ -337,6 +338,13 @@ public class ArbolAdmin {
             return Modificar(contra,con,r.hijoIzquierdo);
         }
         
+    }
+     
+      public void ModificarId(String contra,String nuevocorreo,String con, Administrador r){
+        numero= tamaContra(contra);
+        numero2=tamaContra(contra);
+        eliminar(contra);
+        insertar(nuevocorreo,con); 
     }
     //Metodo Buscar
     /*public Administrador buscar(String contra, Administrador r){

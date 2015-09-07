@@ -93,7 +93,7 @@
 					   <!-- Slide -->
 					   <li>
 						   <div class="flex-caption">
-								<h1>Hola Bienvenido a sistema de Buses Transmetro de la ciudad capital de Guatemala.</h1>	
+								<h1 >Hola Bienvenido a sistema de Buses Transmetro de la ciudad capital de Guatemala.</h1>	
 																							   
 							</div>						
 					   </li>
@@ -141,13 +141,13 @@
                             <input type="password" placeholder="password" size="35"/>
                      </div>
                </div>
-               
+               <br/>
                <div class="row" align="center">
                      <button class="button">Agregar Administrador</button>
                      <div id="image-loader">
                         <img src="images/loader.gif" alt="">
                      </div>     
-                     
+                     &nbsp
                      <button class="button">Modificar Administrador</button>
                      <div id="image-loader">
                         <img src="images/loader.gif" alt="">

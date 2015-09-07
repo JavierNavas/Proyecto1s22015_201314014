@@ -10,5 +10,27 @@ package Arbolavl;
  * @author javier
  */
 public class Ruta {
+     Ruta siguiente;
+     Ruta anterior;
+     int id;
+     String nombre;
+     ListaEstacionPasar lista;
+
+    public Ruta(String nombre) {
+        this.nombre= nombre;
+        this.siguiente= null;
+        this.anterior= null;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
     
+    
+     
+     
 }

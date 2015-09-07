@@ -10,5 +10,24 @@ package Arbolavl;
  * @author javier
  */
 public class EstacionClave {
+    EstacionClave hijoIzquierdo;
+    EstacionClave hijoDerecho;
+    EstacionClave padre; 
+    int id;
+    int nombre;
+    String contra;
+    int fe;
+
+    public EstacionClave(int id, int nombre, String contra) {
+        this.id = id;
+        this.nombre = nombre;
+        this.contra = contra;
+        this.hijoDerecho=null;
+        this.fe=0;
+        this.hijoIzquierdo= null;
+        this.padre= null;
+    }
+    
+    
     
 }

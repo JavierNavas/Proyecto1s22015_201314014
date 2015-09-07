@@ -10,5 +10,23 @@ package Arbolavl;
  * @author javier
  */
 public class Chofer {
+    int id;
+    String nombre;
+    String apellido;
+    String contra;
+    int fe;
+    Chofer hijoIzquierdo;
+    Chofer hijoDerecho;
+    Chofer padre;
     
+    public Chofer( int id,String nombre,String apellido,String contra) {
+        this.fe = 0;
+        this.contra=contra;
+        this.hijoDerecho=null;
+        this.hijoIzquierdo=null;
+        this.padre=null;
+        this.id=id;
+        this.apellido=apellido;
+        this.nombre=nombre;
+    }
 }

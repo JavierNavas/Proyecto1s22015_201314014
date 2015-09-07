@@ -10,5 +10,21 @@ package Arbolavl;
  * @author javier
  */
 public class EstacionGeneral {
-    
+    EstacionGeneral hijoIzquierdo;
+    EstacionGeneral hijoDerecho;
+    EstacionGeneral padre; 
+    int id;
+    int nombre;
+    String contra;
+    int fe;
+
+    public EstacionGeneral(int id, int nombre, String contra) {
+        this.id = id;
+        this.nombre = nombre;
+        this.contra = contra;
+        this.hijoDerecho=null;
+        this.fe=0;
+        this.hijoIzquierdo= null;
+        this.padre= null;
+    }
 }
