@@ -12,16 +12,29 @@ package Arbolavl;
 public class Nodo {
      public static void main(String[] args) {
          ArbolAdmin arbol = new ArbolAdmin();
-         arbol.insertar("javier", "sda");
+         if(arbol.insertar("javier", "sda")){
+             System.out.println("se inserto xXP");
+         }else{
+             System.out.println("errrorrrrrr");
+         }
          arbol.insertar("navarro", "adasx");
          arbol.insertar("n", "adas");
          arbol.insertar("noooooooo", "adas");
          arbol.insertar("o", "adasf");
+         if(arbol.insertar("navarro", "da")){
+             System.out.println("se inserto XP");
+         }else{
+             System.out.println("errrorrrrrr");
+         }
          arbol.recorrerPostOrden(arbol.getRaiz());
          System.out.println("");
          arbol.recorrerInOrden(arbol.getRaiz());
          System.out.println(arbol.buscar("navarro",arbol.getRaiz()).contra);
-         arbol.eliminar("javier");
+          if(arbol.eliminar("javie")){
+               System.out.println("si se elimino");
+          }else{
+               System.out.println("error");
+          }
          arbol.Modificar("o", "jajajja", arbol.getRaiz());
          System.out.println("");
          arbol.recorrerInOrden(arbol.getRaiz());

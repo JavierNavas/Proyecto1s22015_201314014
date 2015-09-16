@@ -20,7 +20,8 @@
         if(ide.equals("admi") && contra.equals("admi")){
             response.sendRedirect("Inicio.jsp");
         }else{
-            
+            request.setAttribute("mensaje","Usuario Incorrecto");
+            request.getRequestDispatcher("Login.jsp").forward(request, response);
         }
        %> 
     </body>

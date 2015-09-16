@@ -3,7 +3,14 @@
     Created on : 27-ago-2015, 23:07:31
     Author     : javier
 --%>
-
+<%String dato= (String)request.getAttribute("mensaje");
+String error;
+if(dato==null){
+    error="";
+}else{
+    error=(String)request.getAttribute("mensaje");
+}
+%>
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 
@@ -53,7 +60,7 @@
                 <br/>
                 <br/>
                 <br/>
-                <label >HTML</label>
+                <label ><%=error %></label>
             </form>
             
         </div>

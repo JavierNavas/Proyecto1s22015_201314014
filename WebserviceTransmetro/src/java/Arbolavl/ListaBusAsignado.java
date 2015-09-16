@@ -9,13 +9,13 @@ package Arbolavl;
  *
  * @author javier
  */
-public class ListaBus {
-     public Bus inicio;
-     public Bus fin;
+public class ListaBusAsignado {
+     public BusAsignado inicio;
+     public BusAsignado fin;
      int tamano;
      
      
-      public ListaBus(){
+      public ListaBusAsignado(){
 	        this.inicio= null;
 	        this.fin = null;
 	        this.tamano = 0;               
@@ -26,7 +26,7 @@ public class ListaBus {
 	        return(this.inicio == null);
 	    }
       
-      public void agregar(Bus nuevo){
+      public void agregar(BusAsignado nuevo){
 		 if(vacio())
 	     {
 	         inicio = nuevo;
@@ -45,7 +45,7 @@ public class ListaBus {
 	    return this.tamano;
 	}
       
-      public void AgregarInicio(Bus nuevo){
+      public void AgregarInicio(BusAsignado nuevo){
         if(inicio==null){
         inicio=nuevo;
         }else{
@@ -55,12 +55,12 @@ public class ListaBus {
         }
         }
       
-      public Bus eliminar(int dato)
+      public BusAsignado eliminar(int dato)
    {
-       Bus eliminar = null;
+       BusAsignado eliminar = null;
        if(!vacio())
-       {      Bus actual = inicio;
-              Bus  anterior = inicio;
+       {      BusAsignado actual = inicio;
+              BusAsignado  anterior = inicio;
            for(int i =0;i<this.tamano;i++)
            {
                if(actual.id==dato)
@@ -88,37 +88,37 @@ public class ListaBus {
        return eliminar;
    }
       
-   public Bus EliminaInicio(){
+   public BusAsignado EliminaInicio(){
 		if(vacio()){
 		System.out.println("No hay elementos");
 		return null;
 		}else if(inicio==fin){
-		Bus nuevo=inicio;
+		BusAsignado nuevo=inicio;
 	   inicio=fin=null;
 		this.tamano--;
 		return nuevo;
 		}
 		else{
-		Bus nuevo=inicio;
+		BusAsignado nuevo=inicio;
 		inicio=inicio.siguiente;
 		this.tamano--;
 		return nuevo;
 		}
 	}
    
-   public Bus EliminaFinal(){
+   public BusAsignado EliminaFinal(){
        if(vacio()) {
        	System.out.println("No hay elementos");
        }
        else{
    		if(inicio==fin){
-   		Bus nuevo=inicio;
+   		BusAsignado nuevo=inicio;
    		inicio=fin=null;
    		this.tamano--;
    		return nuevo;
    		}else{
-           Bus actual = inicio;
-           Bus anterior= inicio;
+           BusAsignado actual = inicio;
+           BusAsignado anterior= inicio;
            while(actual.siguiente != null) {
                anterior=actual;
                actual =actual.siguiente;
@@ -132,8 +132,8 @@ public class ListaBus {
        return null;
    }
    
-    public Bus obtener(int id){
-	       Bus temp=inicio;
+    public BusAsignado obtener(int id){
+	       BusAsignado temp=inicio;
 	    	while(temp!=null){
 	    		if (temp.id==id){
 	    			return temp;

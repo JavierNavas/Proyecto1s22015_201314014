@@ -9,13 +9,13 @@ package Arbolavl;
  *
  * @author javier
  */
-public class ListaBus {
-     public Bus inicio;
-     public Bus fin;
+public class ListaHorario {
+     public Horario inicio;
+     public Horario fin;
      int tamano;
      
      
-      public ListaBus(){
+      public ListaHorario(){
 	        this.inicio= null;
 	        this.fin = null;
 	        this.tamano = 0;               
@@ -26,7 +26,7 @@ public class ListaBus {
 	        return(this.inicio == null);
 	    }
       
-      public void agregar(Bus nuevo){
+      public void agregar(Horario nuevo){
 		 if(vacio())
 	     {
 	         inicio = nuevo;
@@ -45,7 +45,7 @@ public class ListaBus {
 	    return this.tamano;
 	}
       
-      public void AgregarInicio(Bus nuevo){
+      public void AgregarInicio(Horario nuevo){
         if(inicio==null){
         inicio=nuevo;
         }else{
@@ -55,12 +55,12 @@ public class ListaBus {
         }
         }
       
-      public Bus eliminar(int dato)
+      public Horario eliminar(int dato)
    {
-       Bus eliminar = null;
+       Horario eliminar = null;
        if(!vacio())
-       {      Bus actual = inicio;
-              Bus  anterior = inicio;
+       {      Horario actual = inicio;
+              Horario  anterior = inicio;
            for(int i =0;i<this.tamano;i++)
            {
                if(actual.id==dato)
@@ -88,37 +88,37 @@ public class ListaBus {
        return eliminar;
    }
       
-   public Bus EliminaInicio(){
+   public Horario EliminaInicio(){
 		if(vacio()){
 		System.out.println("No hay elementos");
 		return null;
 		}else if(inicio==fin){
-		Bus nuevo=inicio;
+		Horario nuevo=inicio;
 	   inicio=fin=null;
 		this.tamano--;
 		return nuevo;
 		}
 		else{
-		Bus nuevo=inicio;
+		Horario nuevo=inicio;
 		inicio=inicio.siguiente;
 		this.tamano--;
 		return nuevo;
 		}
 	}
    
-   public Bus EliminaFinal(){
+   public Horario EliminaFinal(){
        if(vacio()) {
        	System.out.println("No hay elementos");
        }
        else{
    		if(inicio==fin){
-   		Bus nuevo=inicio;
+   		Horario nuevo=inicio;
    		inicio=fin=null;
    		this.tamano--;
    		return nuevo;
    		}else{
-           Bus actual = inicio;
-           Bus anterior= inicio;
+           Horario actual = inicio;
+           Horario anterior= inicio;
            while(actual.siguiente != null) {
                anterior=actual;
                actual =actual.siguiente;
@@ -131,9 +131,9 @@ public class ListaBus {
      }
        return null;
    }
-   
-    public Bus obtener(int id){
-	       Bus temp=inicio;
+  
+    public Horario obtener(int id){
+	       Horario temp=inicio;
 	    	while(temp!=null){
 	    		if (temp.id==id){
 	    			return temp;
@@ -142,5 +142,4 @@ public class ListaBus {
 	    	}
 	    	return null;
     }
-      
 }

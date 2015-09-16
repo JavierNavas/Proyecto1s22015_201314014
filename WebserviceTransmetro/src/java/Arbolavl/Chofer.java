@@ -18,6 +18,7 @@ public class Chofer {
     Chofer hijoIzquierdo;
     Chofer hijoDerecho;
     Chofer padre;
+    ListaBusAsignado Listabuses = new ListaBusAsignado();
     
     public Chofer( int id,String nombre,String apellido,String contra) {
         this.fe = 0;
