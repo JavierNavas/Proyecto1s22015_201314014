@@ -68,7 +68,7 @@
 	            <li><a class="smoothscroll" href="#about">Estacion General.</a></li>
 	            <li><a class="smoothscroll" href="#journal">Chofer.</a></li>	            
 	            <li><a class="smoothscroll" href="#contact">Bus.</a></li>
-                     <li><a class="smoothscroll" href="#contact">Ruta.</a></li>
+                     <li><a class="smoothscroll" href="#servicess">Ruta.</a></li>
 	         </ul> 
 
 	      </nav> <!-- /nav-wrap -->	      
@@ -133,38 +133,37 @@
            <div id="contact-form" class="twelve columns">
                 <div class="row" align="center" >
                     <h1>Modulo de Administrador</h1>
+                    
+                     <h3>Agregacion.</h3>
                     <hr />
                      <div class="six columns mob-whole">               	
-                            <input type="text" placeholder="Correo Electronico " size="35"/>
+                            <input type="text" name="correoAdmi" class="correoAdmi" placeholder="Correo Electronico " size="35"/>
                      </div>
                      <div class="six columns mob-whole">  
-                            <input type="password" placeholder="password" size="35"/>
+                            <input type="password"  name="contrAdmi" class="contrAdmi" placeholder="password" size="35"/>
                      </div>
                </div>
                <br/>
                <div class="row" align="center">
-                     <button class="button">Agregar Administrador</button>
+                      <input type="submit" value="Agregar Datos"/>
                      <div id="image-loader">
                         <img src="images/loader.gif" alt="">
                      </div>     
                      &nbsp
-                     <button class="button">Modificar Administrador</button>
-                     <div id="image-loader">
-                        <img src="images/loader.gif" alt="">
-                     </div>  
+                      
                      
                   </div>
-            
+                <br/>
                 <div class="row" align="center" >
+                     <h3>Eliminaciòn.</h3>
+                     <HR NOSHADE>
+                      <input type="submit" value="Eliminar Correo"/>
                      <div class="six columns mob-whole">               	
-                            <input type="text" placeholder="Correo Electronico " size="35"/>
+                            <input type="text" name="eliminarAdmi" class="eliminarAdmi" placeholder="Correo Electronico " size="35"/>
                      </div>
-                    <button class="button">Eliminar Administrador</button>
-                     <div id="image-loader">
-                        <img src="images/loader.gif" alt="">
-                     </div>
-                    
+        
                 </div>
+               
            </div>
        </div>  
       
@@ -175,137 +174,101 @@
    ================================================== -->
    <section id="services">
 
-   	<div class="row section-head">
+   	<div class="row form-section">
 
-   		<div class="twelve columns">
-
-	         <h1>Our Awesome Services<span>.</span></h1>
-
-	         <hr />
-
-	         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
-	         eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-	         voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-	         </p>
-
+   		<div id="contact-form" class="twelve columns">
+                    
+	        <div class="row" align="center" >
+                    <h1>Modulo de Estacion Clave</h1>
+                     <h3>Agregacion.</h3>
+                     <hr />
+                     <div class="six columns mob-whole">               	
+                            <input type="text" name="idEstacionC" class="idEstacionC" placeholder="Id Numerico " size="35"/>
+                     </div>
+                     <div class="six columns mob-whole">               	
+                            <input type="text" name="nombreEstacionC" class="nombreEstacionC" placeholder="Nombre" size="35"/>
+                     </div>
+                     
+               </div>
+               <br/>
+               <div class="row" align="center" >
+                            <input type="password" name="contraEstacionC" class="contraEstacionC" placeholder="Password" size="35"/>
+               </div>
+               <br/>
+               <div class="row" align="center">
+                      <input type="submit" value="Agregar Datos"/>
+               </div>
+               <br/>
+                <div class="row" align="center" >
+                     <h3>Eliminaciòn.</h3>
+                     <HR NOSHADE>
+                      <input type="submit" value="Eliminar Estacion"/>
+                     <div class="six columns mob-whole">               	
+                            <input type="text"  name="eliminarEstacionC" class="eliminarEstacionC"placeholder="Id Numerico " size="35"/>
+                     </div>
+        
+                </div>
          </div>
 
       </div>
 
-      <div class="row">
-
-      	<div class="twelve columns">
-
-	      	<div class="service-list bgrid-third s-bgrid-half mob-bgrid-whole">
-
-	      		<div class="bgrid">
-
-	               <div class="icon-part">
-	               	<span class="icon-graph"></span>
-	               </div>
-
-	               <h3>Marketing.</h3>
-
-	               <div class="service-content">	                  
-		               <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
-	         			</p> 
-	               </div>      
-
-	            </div> <!-- /bgrid -->
-
-				   <div class="bgrid">
-
-	              	<div class="icon-part">
-	               	<i class="icon-film"></i>
-	               </div>
-
-	               <h3>Videography.</h3>                  
-
-	               <div class="service-content">	                  
-		               <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventoveritatis et quasi architecto beatae vitae dicta sunt explicabo.
-	         			</p> 
-	               </div>                                 
-
-	            </div> <!-- /bgrid -->
-
-				   <div class="bgrid">
-
-	              	<div class="icon-part">	               	
-	               	<i class="icon-camera"></i>
-	               </div>
-
-	               <h3>Photography.</h3>
-
-	               <div class="service-content">		                  
-		               <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
-	         			</p> 
-	               </div>                               
-
-	            </div> <!-- /bgrid -->
-
-				   <div class="bgrid first">
-
-	              	<div class="icon-part">
-	               	<i class="icon-eye"></i>	               	
-	               </div>
-	                  
-	               <h3>Branding.</h3> 
-
-	               <div class="service-content">	                  
-		               <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
-	         			</p> 
-	               </div>                                 
-
-	            </div> <!-- /bgrid -->
-
-				   <div class="bgrid">
-
-	              	<div class="icon-part">
-	               	<i class="icon-screen-desktop"></i>
-	               </div>
-	                  
-	               <h3>Web Design.</h3>
-
-	               <div class="service-content">	                  
-		               <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
-	         			</p> 
-	               </div>                                 
-
-	             </div> <!-- /bgrid -->
-
-				   <div class="bgrid">
-
-	               <div class="icon-part">
-	               	<i class="icon-eyeglasses"></i>
-	               </div>
-
-	               <h3>Web Development.</h3>
-
-	               <div class="service-content">
-		               <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
-	         			</p> 
-	               </div>                              
-
-	            </div> <!-- /bgrid -->
-
-	      	</div> <!-- /service-list -->
-
-	      </div> <!-- /twelve -->
-
-      </div> <!-- /row -->      
-
+      
    </section> <!-- /services -->   
 
 
    <!-- About Section
    ================================================== -->
-   <section id="about">
+   <section id="about" name="EstacionGeneral">
+       
+   	<div class="row form-section">
 
+   		<div id="contact-form" class="twelve columns">
+                    
+	        <div class="row" align="center" >
+                    <h1>Modulo de Estacion General</h1>
+                     <h3>Agregacion.</h3>
+                     <hr />
+                     <div class="six columns mob-whole">               	
+                            <input type="text" name="idEstacionG" class="idEstacionG" placeholder="Id Numerico " size="35"/>
+                     </div>
+                     <div class="six columns mob-whole">               	
+                            <input type="text" name="nombreEstacionG" class="nombreEstacionG" placeholder="Nombre" size="35"/>
+                     </div>
+                     
+               </div>
+               <br/>
+               <div class="row" align="center" >
+                            <input type="password" name="contraEstacionG" class="contraEstacionG" placeholder="Password" size="35"/>
+               </div>
+               <br/>
+               <div class="row" align="center">
+                      <input type="submit" value="Agregar Datos"/>
+               </div>
+               <br/>
+                <div class="row" align="center" >
+                     <h3>Eliminaciòn.</h3>
+                     <HR NOSHADE>
+                     <input type="submit" value="Eliminar Estacion"/>
+                     <div class="six columns mob-whole">               	
+                            <input type="text"  name="eliminarEstacionG" class="eliminarEstacionG"placeholder="Id Numerico" size="35"/>
+                     </div>
+        
+                </div>
+         </div>
+
+      </div>
+
+   </section> <!-- /about -->
+
+
+   
+    <section id="servicess">
+       
    	<div class="row section-head">
 
    		<div class="twelve columns">
 
-	         <h1>Who Are We<span>.</span></h1>
+	         <h1>holllaaaa<span>.</span></h1>
 
 	         <hr />
 
@@ -317,210 +280,7 @@
 	      </div>
 
       </div>
-
-      <div class="row about-content"> 
-
-      	<div class="mob-whole six columns left">
-
-      		<h3>Our Process.</h3>	
-
-	      	<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
-	         eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-	         voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-	         </p>
-
-      	</div> <!-- /left -->
-
-      	<div class="mob-whole six columns right">
-
-	      	<h3>Our Approach.</h3>
-
-	      	<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
-	         eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-	         voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-	         </p>	
-
-      	</div> <!-- /right -->
-
-      </div> <!-- /row -->    
-
-      <div class="row about-content"> 
-
-      	<div class="mob-whole six columns left">
-
-	      	<h3>Our Goal.</h3>	
-
-	      	<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
-	         eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-	         voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-	         </p>
-
-      	</div> <!-- /left -->
-
-      	<div class="mob-whole six columns right">
-
-	      	<h3>Our Mission.</h3>
-
-	      	<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
-	         eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-	         voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-	         </p>	
-
-      	</div> <!-- /right -->
-
-      </div> <!-- /row -->
-
-
-      <!-- team
-   	=================================================== -->
-   	<div id='team'>
-
-	      <div class="row team section-head">
-
-	   		<div class="twelve columns">
-
-		         <h1>Our Rockstar Team<span>.</span></h1>
-
-		         <hr />
-
-		         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
-		         eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-		         voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-		         </p>	         
-
-		      </div>
-
-	      </div>
-
-      	<div class="row about-content">
-
-      		<div class="twelve columns">
-
-		         <div id="team-wrapper" class="bgrid-half mob-bgrid-whole group">
-
-		            <div class="bgrid member">
-
-		               <div class="member-header">
-
-		                 	<div class="member-pic">
-									<img src="images/team/member01-k.jpg" alt=""/>                        	                       	
-		                 	</div>
-
-		                  <div class="member-name">
-		                     <h3>Naruto Uzumaki</h3>
-		                     <span>Creative Director</span>
-		                  </div>
-
-		               </div>							
-
-		               <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor,
-		               nisi elit consequat ipsum, nec sagittis sem nibh id elit. </p>
-
-		               <ul class="member-social">
-		                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-		                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-		                  <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-		                  <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-		                  <li><a href="#"><i class="fa fa-skype"></i></a></li>
-		               </ul>
-
-		          	</div> <!-- /member -->
-
-		            <div class="bgrid member">
-
-		              	<div class="member-header">
-										
-								<div class="member-pic">
-		                 		<img src="images/team/member02-k.jpg" alt=""/>                        	
-		                	</div>
-		                
-		                	<div class="member-name">
-		                   	<h3>Sasuke Uchiha</h3>
-		                   	<span>Lead Designer</span>
-		                	</div>
-
-		               </div>
-
-		               <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor,
-		               nisi elit consequat ipsum, nec sagittis sem nibh id elit. </p>
-
-		               <ul class="member-social">
-		                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-		                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-		                  <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-		                  <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-		                  <li><a href="#"><i class="fa fa-skype"></i></a></li>
-		               </ul>
-
-		       		</div> <!-- /member -->
-
-		            <div class="bgrid member first">
-
-							<div class="member-header">
-							
-								<div class="member-pic">
-		                		<img src="images/team/member03-k.jpg" alt=""/>                        	
-		               	</div>
-
-		               	<div class="member-name">
-		                  	<h3>Sakura Haruno</h3>
-		                  	<span>Web Designer</span>
-		               	</div>
-
-							</div>
-
-		               <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor,
-		               nisi elit consequat ipsum, nec sagittis sem nibh id elit. </p>
-
-		               <ul class="member-social">
-		                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-		                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-		                  <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-		                  <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-		                  <li><a href="#"><i class="fa fa-skype"></i></a></li>
-		               </ul>
-
-		      		</div> <!-- /member -->
-
-		            <div class="bgrid member">
-
-		            	<div class="member-header">
-										
-								<div class="member-pic">
-									<img src="images/team/member04-k.jpg" alt=""/>                        	                        	
-		                 	</div>
-
-		                  <div class="member-name">
-		                     <h3>Shikamaru Nara</h3>
-		                     <span>Web Designer</span>
-		                  </div>
-
-		               </div>
-
-		               <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor,
-		                  nisi elit consequat ipsum, nec sagittis sem nibh id elit. </p>
-
-		               <ul class="member-social">
-		                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-		                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-		                  <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-		                  <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-		                  <li><a href="#"><i class="fa fa-skype"></i></a></li>
-		               </ul>
-
-		            </div> <!-- /member -->
-
-		         </div> <!-- /twelve -->
-
-	         </div> <!-- /team-wrapper -->
-
-         </div> <!-- /row -->
-
-      </div> <!-- /team -->           
-
-   </section> <!-- /about -->
-
-
+   </section>
    <!-- journal
    =================================================== -->
    <section id="journal">
@@ -529,7 +289,7 @@
 
 	   	<div class="twelve columns">
 
-			   <h1>Our Latest Ramblings<span>.</span></h1>
+			   <h1>Chofer<span>.</span></h1>
 
 			   <hr />
 
@@ -542,91 +302,6 @@
 
 	   </div>
 
-      <div class="row">
-
-      	<div class="twelve columns">
-
-	         <div id="blog-wrapper" class="bgrid-third s-bgrid-half mob-bgrid-whole group">
-
-	            <article class="bgrid">
-						
-						<h5>September 2, 2014</h5>
-	               <h3><a href="single.html">Sed ut perspiciatis unde omnis iste natus</a></h3>
-	                           
-	               <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor,
-	               isi elit consequat ipsum, nec sagittis sem nibh id elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.
-	               </p>
-	                        
-	            </article>
-
-	            <article class="bgrid">
-						
-						<h5>August 29, 2014</h5>
-	               <h3><a href="single.html">Natus error sit voluptatem accusantium.</a></h3>
-	                           
-	               <p>
-	               Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
-	               totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
-	            	</p>
-	                        
-	            </article>
-
-	            <article class="bgrid">
-						
-						<h5>August 28, 2014</h5>	
-	               <h3><a href="single.html">Ut enim ad minim veniam quis nostrud</a></h3>
-	                           
-	               <p>
-	               Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor,
-	               isi elit consequat ipsum, nec sagittis sem nibh id elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium. 
-	            	</p>
-	                        
-	            </article>
-
-	            <article class="bgrid first">
-						
-						<h5>August 27, 2014</h5>
-	               <h3><a href="single.html">Sed ut perspiciatis unde omnis iste natus</a></h3>
-	                           
-	               <p>
-	               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	               tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	               quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	               consequat.
-	            	</p>
-	                        
-	            </article>
-
-	            <article class="bgrid">
-						
-						<h5>August 25, 2014</h5>
-	               <h3><a href="single.html">Rerum dignissimos alias eligendi laudantium quod.</a></h3>
-	                           
-	               <p>
-	               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum fuga distinctio natus ab sint 
-	               voluptate quos cumque assumenda ipsa cupiditate aperiam officiis recusandae nemo labore adipisci harum, 
-	               ea odio dolor. 
-	            	</p>
-	                        
-	            </article>
-
-	            <article class="bgrid">
-						
-						<h5>August 23, 2014</h5>
-	               <h3><a href="single.html">Sed ut perspiciatis unde omnis iste natus</a></h3>
-	                           
-	               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt cumque, aut nam at, 
-	               doloremque repellat blanditiis quo accusantium, rerum dignissimos alias eligendi, laudantium quod. 
-	               Autem nihil explicabo ipsa magnam porro.
-	            	</p>
-	                        
-	            </article>                     
-
-	         </div> <!-- /blog-wrapper -->
-
-	      </div> <!-- /twelve -->
-
-      </div> <!-- /row -->
 
    </section> <!-- /blog -->
 
@@ -721,6 +396,7 @@
    </section>  <!-- /contact-->
 
 
+  
    <!-- Footer
    ================================================== -->
    <footer>

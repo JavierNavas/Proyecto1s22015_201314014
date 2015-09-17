@@ -5,6 +5,13 @@
  */
 package Arbolavl;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author javier
@@ -335,22 +342,7 @@ public class ArbolAdmin {
         }
         
     }
-      
-     public Administrador Modificar(String contra,String con, Administrador r){
-        numero= tamaContra(contra);
-        if(raiz==null){
-            return null;
-        }else if(r.id==numero){
-            r.contra=con;
-            return r;
-        }
-        else if(r.id<numero){
-            return Modificar(contra,con,r.hijoDerecho);
-        }else{
-            return Modificar(contra,con,r.hijoIzquierdo);
-        }
-        
-    }
+   
      
       public boolean Modificar(String correoAntiguo,String nuevocorreo,String con){
         Administrador temp = buscar(correoAntiguo,raiz);
@@ -369,5 +361,72 @@ public class ArbolAdmin {
         }
         
     }
-   
+      
+public static String getDotFile(ArbolAdmin t){
+  StringBuilder sb = new StringBuilder();
+  sb.append("digraph G {\n");//escribiendo en sintaxis dot
+  sb.append("graph [ dpi = 250 ]\n"); 
+  sb.append("nodesep=0.3;\n");
+  sb.append("ranksep=0.2;\n");
+  sb.append("margin=0.1;\n");
+  sb.append("node [shape=circle];\n");
+  sb.append("edge [arrowsize=0.8];\n");
+  
+  StringBuilder treeContent = getDotTreeContent(new StringBuilder(), t.getRaiz(), 1);
+  sb.append(treeContent);
+  
+  sb.append("}");
+  
+  return sb.toString();
+}
+
+
+private static StringBuilder getDotTreeContent(StringBuilder sb, Administrador n, int i){
+    sb.append(String.format("node%d [label=\"%s\"];\n", i, "Correo:"+n.correo+" Password: "+n.contra));
+  int lChild = 2*i;
+  int rChild = 2*i + 1;
+  //codigo personalizado
+  if(n.hijoIzquierdo  != null){
+    sb.append(String.format("node%d -> node%d;\n", i, lChild));
+    getDotTreeContent(sb, n.hijoIzquierdo, lChild);
+  }//xppppp
+  if(n.hijoDerecho != null){
+    sb.append(String.format("node%d -> node%d;\n", i, rChild));
+    getDotTreeContent(sb, n.hijoDerecho, rChild);
+  }
+  return sb;
+}
+
+ public void generartxt(String estructura){
+         BufferedWriter b=null;
+        try {
+            String file="C:\\Users\\javier\\Documents\\Bluetooth Folder\\arbolAdmi.txt";
+            b = new BufferedWriter(new FileWriter(file));
+            b.write(estructura);
+            b.close();
+            } catch (IOException ex) {
+
+            }
+	}
+ 
+  public void generar(){
+		   try{
+		       String dotPath="C:\\Program Files (x86)\\Graphviz2.38\\bin\\dot.exe";
+		       String fileInputPath="C:\\Users\\javier\\Documents\\Bluetooth Folder\\arbolAdmi.txt";
+		       String fileOutputPath="C:\\Users\\javier\\Documents\\Bluetooth Folder\\arbolAdmi.jpg";
+		       String tParam="-Tjpg";
+		       String toParam="-o";
+		       String[]cmd= new String[5];
+		       cmd[0]=dotPath;
+		       cmd[1]=tParam;
+		       cmd[2]=fileInputPath;
+		       cmd[3]=toParam;
+		       cmd[4]= fileOutputPath; 
+		       Runtime rt = Runtime.getRuntime();
+		       rt.exec(cmd);
+		   }catch(Exception ex){
+		       ex.printStackTrace();
+		   }  finally {
+		 }
+		}
 }

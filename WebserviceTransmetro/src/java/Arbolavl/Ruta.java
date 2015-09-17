@@ -14,7 +14,7 @@ public class Ruta {
      Ruta anterior;
      int id;
      String nombre;
-     ListaEstacionPasar lista;
+     ListaEstacionPasar lista= new ListaEstacionPasar () ;
 
     public Ruta(String nombre) {
         this.nombre= nombre;

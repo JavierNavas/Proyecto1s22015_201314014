@@ -16,6 +16,7 @@ public class EstacionClave {
     int id;
     int nombre;
     String contra;
+    int numeroPersonas;
     int fe;
 
     public EstacionClave(int id, int nombre, String contra) {
@@ -26,6 +27,8 @@ public class EstacionClave {
         this.fe=0;
         this.hijoIzquierdo= null;
         this.padre= null;
+        this.numeroPersonas=0;
+        
     }
     
     

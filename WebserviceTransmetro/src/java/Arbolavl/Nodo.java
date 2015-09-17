@@ -35,9 +35,11 @@ public class Nodo {
           }else{
                System.out.println("error");
           }
-         arbol.Modificar("o", "jajajja", arbol.getRaiz());
          System.out.println("");
          arbol.recorrerInOrden(arbol.getRaiz());
           System.out.println(arbol.buscar("o",arbol.getRaiz()).contra);
+          
+         arbol.generartxt(ArbolAdmin.getDotFile(arbol));
+         arbol.generar();
      }
 }
