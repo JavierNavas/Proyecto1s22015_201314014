@@ -14,12 +14,12 @@ public class EstacionGeneral {
     EstacionGeneral hijoDerecho;
     EstacionGeneral padre; 
     int id;
-    int nombre;
+    String nombre;
     String contra;
     int numeroPersonas;
     int fe;
 
-    public EstacionGeneral(int id, int nombre, String contra) {
+    public EstacionGeneral(int id, String nombre, String contra) {
         this.id = id;
         this.nombre = nombre;
         this.contra = contra;

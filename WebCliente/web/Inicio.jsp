@@ -66,9 +66,9 @@
 		         <li><a class="smoothscroll" href="#portfolio">Administrador.</a></li>
 	            <li><a class="smoothscroll" href="#services">Estacion Clave.</a></li>
 	            <li><a class="smoothscroll" href="#about">Estacion General.</a></li>
-	            <li><a class="smoothscroll" href="#journal">Chofer.</a></li>	            
-	            <li><a class="smoothscroll" href="#contact">Bus.</a></li>
-                     <li><a class="smoothscroll" href="#servicess">Ruta.</a></li>
+	            <li><a class="smoothscroll" href="#journal">Bus.</a></li>	            
+	            <li><a class="smoothscroll" href="#content">Chofer.</a></li>
+                     <li><a class="smoothscroll" href="#contact">Ruta.</a></li>
 	         </ul> 
 
 	      </nav> <!-- /nav-wrap -->	      
@@ -261,42 +261,37 @@
    </section> <!-- /about -->
 
 
-   
-    <section id="servicess">
-       
-   	<div class="row section-head">
-
-   		<div class="twelve columns">
-
-	         <h1>holllaaaa<span>.</span></h1>
-
-	         <hr />
-
-	         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
-	         eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-	         voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-	         </p>
-
-	      </div>
-
-      </div>
-   </section>
    <!-- journal
    =================================================== -->
    <section id="journal">
 
-	   <div class="row section-head">
+	   <div class="row form-section">
 
 	   	<div class="twelve columns">
 
-			   <h1>Chofer<span>.</span></h1>
-
-			   <hr />
-
-			   <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
-		       eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-		       voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-		      </p>	         
+			<div class="row" align="center" >
+                    <h1>Modulo de Buses</h1>
+                     <h3>Agregacion.</h3>
+                     <hr />
+                     <div class="six columns mob-whole">               	
+                            <input type="text" name="idBus"  placeholder="Id Numerico" size="35"/>
+                     </div>
+                     
+               </div>
+               <br/>
+               <div class="row" align="center">
+                      <input type="submit" value="Agregar Datos"/>
+               </div>
+               <br/>
+                <div class="row" align="center" >
+                     <h3>Eliminaciòn.</h3>
+                     <HR NOSHADE>
+                     <input type="submit" value="EliminarBus"/>
+                     <div class="six columns mob-whole">               	
+                            <input type="text"  name="eliminarBus" placeholder="Id Numerico" size="35"/>
+                     </div>
+        
+                </div>         
 
 		    </div>
 
@@ -305,93 +300,77 @@
 
    </section> <!-- /blog -->
 
+   <section id="content">
+      <br/>
+      <div class="row form-section">
+
+	   	<div class="twelve columns">
+
+			<div class="row" align="center" >
+                    <h1>Modulo de Choferes</h1>
+                     <h3>Agregacion.</h3>
+                     <hr />
+                     <div class="six columns mob-whole">               	
+                            <input type="text" name="idChofer"  placeholder="Id Numerico" size="35"/>
+                     </div>
+                     <div class="six columns mob-whole">               	
+                            <input type="password" name="contraChofer"  placeholder="Password" size="35"/>
+                     </div>
+                     
+               </div>
+               <br/>
+               <div class="row" align="center" >
+                     <div class="six columns mob-whole">               	
+                            <input type="text" name="nombreChofer"  placeholder="Nombre" size="35"/>
+                     </div>
+                     <div class="six columns mob-whole">               	
+                            <input type="text" name="apellidoChofer"  placeholder="Apellido" size="35"/>
+                     </div>
+               </div>
+               <br/>
+               <div class="row" align="center">
+                      <input type="submit" value="Agregar Datos"/>              
+               </div>
+               <br/>
+                <div class="row" align="center" >
+                     <h3>Eliminaciòn.</h3>
+                     <hr />           
+                     <div class="six columns mob-whole">   
+                     <input type="submit" value="EliminarChofer"/>
+                     </div>
+                     <div class="six columns mob-whole">   
+                     <input type="text"  name="eliminarChofer" class="eliminarEstacionG"placeholder="Id Numerico" size="35" align="center" />
+                     </div>
+                 </div>
+
+		    </div>
+
+	   </div>
+   </section>
    
    <!-- Contact Section
    ================================================== -->
    <section id="contact">
+    <div class="row form-section">
 
-   	<div class="row section-head">
+                 <div class="twelve columns">
 
-   		<div class="twelve columns">
+			<div class="row" align="center" >
+                    <h1>Modulo de Rutas</h1>
+                     <h3>Agregacion.</h3>
+                     <hr />
+                     <div class="six columns mob-whole">               	
+                            <input type="text" name="NombreRuta"  placeholder="Nombre" size="35"/>
+                     </div>
+                     <div class="row" align="center">
+                      <input type="submit" value="Agregar Datos"/>              
+               </div>
+               </div>
 
-	         <h1>Get In Touch With Us<span>.</span></h1>
-
-	         <hr />
-
-	         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
-	         eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-	         voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-	         </p>
-
-	      </div>
 
       </div>
-
-      <div class="row form-section">
-      	
-      	<div id="contact-form" class="twelve columns">
-
-            <form name="contactForm" id="contactForm" method="post" action="">
-
-      			<fieldset>
-
-                  <div class="row">
-
-	                  <div class="six columns mob-whole">
-	                  	<label for="contactFname">First Name <span class="required">*</span></label>	      						   
-	      					<input name="contactFname" type="text" id="contactFname" placeholder="First Name" value="" />	      					
-	                  </div>
-
-	                  <div class="six columns mob-whole">	
-	                  	<label for="contactLname">Last Name <span class="required">*</span></label>      						   
-	      					<input name="contactLname" type="text" id="contactLname" placeholder="Last Name" value="" />	      					
-	                  </div>	                        
-
-                  </div>
-
-                  <div class="row">
-
-	                  <div class="six columns mob-whole">	
-	                  	<label for="contactEmail">Email <span class="required">*</span></label>      						   
-	      					<input name="contactEmail" type="text" id="contactEmail" placeholder="Email" value="" />	      					
-	                  </div>
-
-	                  <div class="six columns mob-whole">	 
-	                  	<label for="contactSubject">Subject</label>     						   
-	      					<input name="contactSubject" type="text" id="contactSubject" placeholder="Subject"  value="" />	      					
-	                  </div>
-
-                  </div>
-
-                  <div class="row">
-
-	                  <div class="twelve columns">
-	                     <label  for="contactMessage">Message <span class="required">*</span></label>
-	                     <textarea name="contactMessage"  id="contactMessage" placeholder="Your Message" rows="10" cols="50" ></textarea>
-	                  </div>
-
-                  </div>
-
-                  <div>
-                     <button class="submit full-width">Send Message</button>
-                     <div id="image-loader">
-                        <img src="images/loader.gif" alt="" />
-                     </div>
-                  </div>
-
-      			</fieldset>
-      				
-      		</form> <!-- /contactForm -->
-
-            <!-- message box -->
-            <div id="message-warning"></div>
-            <div id="message-success">
-               <i class="fa fa-check"></i>Your message was sent, thank you!<br />
-    			</div>
-
-         </div> <!-- /contact-form -->      	
-
-      </div> <!-- /form-section -->     
+   	
+      
 
    </section>  <!-- /contact-->
 
@@ -399,72 +378,36 @@
   
    <!-- Footer
    ================================================== -->
-   <footer>
-
-      <div class="row">       
-
-         <div class="six columns tab-whole footer-about">
-				
-				<h3>About Puremedia</h3>
-               
-            <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
-            Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem
-            nibh id elit. 
-            </p>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
-            	incididunt ut labore et dolore magna aliqua.</p>        
-
-         </div> <!-- /footer-about -->
-
-         <div class="six columns tab-whole right-cols">
-
-            <div class="row">
-
-               <div class="columns">
-                  <h3 class="address">Contact Us</h3>
-                  <p>
-                  1600 Amphitheatre Parkway<br>
-                  Mountain View, CA<br>
-                  94043 US
-                  </p>
-
-                  <ul>
-                    <li><a href="tel:6473438234">647.343.8234</a></li>
-                    <li><a href="tel:1234567890">123.456.7890</a></li>
-                    <li><a href="mailto:someone@puremedia.com">someone@puremedia.com</a></li>
-                  </ul>                  
-               </div> <!-- /columns -->             
-
-               <div class="columns last">
-                  <h3 class="contact">Follow Us</h3>
-
-                  <ul>
-                     <li><a href="#">Facebook</a></li>
-                     <li><a href="#">Twitter</a></li>
-                     <li><a href="#">GooglePlus</a></li>
-                     <li><a href="#">Instagram</a></li>
-                     <li><a href="#">Flickr</a></li>
-                     <li><a href="#">Skype</a></li>
-                  </ul>
-                  
-               </div> <!-- /columns --> 
-
-            </div> <!-- /Row(nested) -->
-
-         </div>
-
-         <p class="copyright">&copy; Copyright 2014 Puremedia. Design by <a href="http://www.styleshout.com/">Styleshout.</a></p>        
-
-         <div id="go-top">
-            <a class="smoothscroll" title="Back to Top" href="#hero"><span>Top</span><i class="fa fa-long-arrow-up"></i></a>
-         </div>
-
-      </div> <!-- /row -->
+   <footer>			
+				<h3>Milton Navarro USAC</h3>
+                              
+  <img src="images/ArbolAdmi.jpg" width="1875" height="2847" alt="ArbolAdmi" name="imagen1" id="imagen1"/>
 
    </footer> <!-- /footer -->
 
-
+<script language="JavaScript" type="text/javascript" >
+        periodo = 1;  // segundos entre recargas
+        imgoImg=document.getElementById("imagen1");
+        imgsrc = imgoImg.src;
+        buffer = new Image();
+        buffer.onload = imageChange;
+        buffer.onerror = imageError;
+        setTimeout("imageReload()", periodo * 1000);
+       
+        function imageReload() {
+            buffer.src = imgsrc + "?d=" + new Date().getTime();
+            setTimeout("imageReload()", periodo * 1000);
+        }
+       
+        function imageChange() {
+            imgoImg.src = buffer.src;
+        }
+     
+        function imageError() {
+            setTimeout("imageReload()", 1000);
+        }
+    </script>
+   
    <!-- Java Script
    ================================================== -->
    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>

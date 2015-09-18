@@ -19,6 +19,7 @@ public class Nodo {
          }
          arbol.insertar("navarro", "adasx");
          arbol.insertar("n", "adas");
+          arbol.insertar("milton", "prueba");
          arbol.insertar("noooooooo", "adas");
          arbol.insertar("o", "adasf");
          if(arbol.insertar("navarro", "da")){

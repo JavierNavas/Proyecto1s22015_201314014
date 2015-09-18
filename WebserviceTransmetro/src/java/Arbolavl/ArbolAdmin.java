@@ -337,8 +337,10 @@ public class ArbolAdmin {
         }
         else if(r.id<numero){
             return buscar(contra,r.hijoDerecho);
-        }else{
+        }else if(r.id>numero){
             return buscar(contra,r.hijoIzquierdo);
+        }else{
+            return null;
         }
         
     }
@@ -413,7 +415,7 @@ private static StringBuilder getDotTreeContent(StringBuilder sb, Administrador n
 		   try{
 		       String dotPath="C:\\Program Files (x86)\\Graphviz2.38\\bin\\dot.exe";
 		       String fileInputPath="C:\\Users\\javier\\Documents\\Bluetooth Folder\\arbolAdmi.txt";
-		       String fileOutputPath="C:\\Users\\javier\\Documents\\Bluetooth Folder\\arbolAdmi.jpg";
+		       String fileOutputPath="C:\\Users\\javier\\Documents\\Proyecto1s22015_201314014\\WebCliente\\web\\images\\ArbolAdmi.jpg";
 		       String tParam="-Tjpg";
 		       String toParam="-o";
 		       String[]cmd= new String[5];

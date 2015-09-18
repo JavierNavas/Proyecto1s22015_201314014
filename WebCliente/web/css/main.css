@@ -1676,13 +1676,10 @@ hr {
 /*  o. Journal Section
 /* =================================================================== */
 #journal {
-	background: #a43b0a url(../images/blog-bg.jpg) no-repeat bottom center fixed;
-	-webkit-background-size: cover !important;
-	-moz-background-size: cover !important;
-	background-size: cover !important;
+	background: #12151b;
 	padding-top: 120px;
-	padding-bottom: 108px;
-	width: 100%;
+	padding-bottom: 102px;
+	overflow: hidden;
 }
 #journal h1, #journal h3, #journal h3 a {
 	color: white;
@@ -1724,6 +1721,9 @@ hr {
 	max-width: 784px;
 }
 #contact h1 {
+	color: white;
+}
+#contact h3 {
 	color: white;
 }
 
