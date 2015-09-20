@@ -14,12 +14,12 @@ import java.util.Date;
 public class BusAsignado {
     int id;
     int idBus;
-    Date fecha;
+    String fecha;
     ListaHorario listahora = new  ListaHorario();
     BusAsignado siguiente;
     BusAsignado anterior;
    
-    public BusAsignado(int id,int idBus,Date fecha) {
+    public BusAsignado(int id,int idBus,String fecha) {
         this.id=id;
         this.idBus = idBus;
         this.fecha=fecha;
@@ -43,11 +43,11 @@ public class BusAsignado {
         this.idBus = idBus;
     }
 
-    public Date getFecha() {
+    public String getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(String fecha) {
         this.fecha = fecha;
     }
     

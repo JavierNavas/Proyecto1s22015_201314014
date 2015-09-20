@@ -32,12 +32,14 @@ public class ListaBus {
 	         inicio = nuevo;
 	         fin = nuevo;
 	         tamano = 1;
+                 System.out.println("agregue el primero");
 	     }
 	     else{
 	         fin.siguiente= nuevo;
 	         nuevo.anterior=fin;
 	         fin=nuevo;
 	         tamano++;
+                  System.out.println("agreguegado");
 	     }
 	} 
       
@@ -142,5 +144,33 @@ public class ListaBus {
 	    	}
 	    	return null;
     }
+    
+     public boolean existe(int id){
+        Bus aux = inicio;
+        while(aux!=null){
+                if(aux.id==id){
+                    System.out.println("hola");
+                    return true;
+                }
+                aux= aux.siguiente;
+        }
+        return false;
+    }
+     
+    public void ordenar(ListaBus lista){
+        
+    }
       
+    public Bus obtenerpos(int a){
+    Bus actual = inicio;
+      for(int pos =0;pos<a;pos++){
+          if(actual != null){
+          actual = actual.siguiente;
+          }
+          else 
+              return null;
+      }
+    
+    return actual;
+ }
 }

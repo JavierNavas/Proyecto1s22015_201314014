@@ -1,0 +1,471 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is JAX-WS RI 2.2.10 svn-revision#919b322c92f13ad085a933e8dd6dd35d4947364b. --><xs:schema xmlns:tns="http://Transmetro/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://Transmetro/">
+
+<xs:element name="AgregarAdministrador" type="tns:AgregarAdministrador"/>
+
+<xs:element name="AgregarAdministradorResponse" type="tns:AgregarAdministradorResponse"/>
+
+<xs:element name="AgregarBus" type="tns:AgregarBus"/>
+
+<xs:element name="AgregarBusResponse" type="tns:AgregarBusResponse"/>
+
+<xs:element name="AgregarChofer" type="tns:AgregarChofer"/>
+
+<xs:element name="AgregarChoferResponse" type="tns:AgregarChoferResponse"/>
+
+<xs:element name="AgregarEstacionC" type="tns:AgregarEstacionC"/>
+
+<xs:element name="AgregarEstacionCResponse" type="tns:AgregarEstacionCResponse"/>
+
+<xs:element name="AgregarEstacionG" type="tns:AgregarEstacionG"/>
+
+<xs:element name="AgregarEstacionGResponse" type="tns:AgregarEstacionGResponse"/>
+
+<xs:element name="AsignarBusChofer" type="tns:AsignarBusChofer"/>
+
+<xs:element name="AsignarBusChoferResponse" type="tns:AsignarBusChoferResponse"/>
+
+<xs:element name="DibujarArbol" type="tns:DibujarArbol"/>
+
+<xs:element name="DibujarArbolResponse" type="tns:DibujarArbolResponse"/>
+
+<xs:element name="EliminarAdministrador" type="tns:EliminarAdministrador"/>
+
+<xs:element name="EliminarAdministradorResponse" type="tns:EliminarAdministradorResponse"/>
+
+<xs:element name="EliminarBus" type="tns:EliminarBus"/>
+
+<xs:element name="EliminarBusResponse" type="tns:EliminarBusResponse"/>
+
+<xs:element name="EliminarEstacionG" type="tns:EliminarEstacionG"/>
+
+<xs:element name="EliminarEstacionGResponse" type="tns:EliminarEstacionGResponse"/>
+
+<xs:element name="GraficarLista" type="tns:GraficarLista"/>
+
+<xs:element name="GraficarListaResponse" type="tns:GraficarListaResponse"/>
+
+<xs:element name="Login" type="tns:Login"/>
+
+<xs:element name="LoginResponse" type="tns:LoginResponse"/>
+
+<xs:element name="ModificarAdmi" type="tns:ModificarAdmi"/>
+
+<xs:element name="ModificarAdmiResponse" type="tns:ModificarAdmiResponse"/>
+
+<xs:element name="ModificarEstaciong" type="tns:ModificarEstaciong"/>
+
+<xs:element name="ModificarEstaciongResponse" type="tns:ModificarEstaciongResponse"/>
+
+<xs:element name="ObtenerDot" type="tns:ObtenerDot"/>
+
+<xs:element name="ObtenerDotResponse" type="tns:ObtenerDotResponse"/>
+
+<xs:element name="agregarRuta" type="tns:agregarRuta"/>
+
+<xs:element name="agregarRutaResponse" type="tns:agregarRutaResponse"/>
+
+<xs:element name="agregarestaciontemp" type="tns:agregarestaciontemp"/>
+
+<xs:element name="agregarestaciontempResponse" type="tns:agregarestaciontempResponse"/>
+
+<xs:element name="eliminarChofer" type="tns:eliminarChofer"/>
+
+<xs:element name="eliminarChoferResponse" type="tns:eliminarChoferResponse"/>
+
+<xs:element name="eliminarEstacionC" type="tns:eliminarEstacionC"/>
+
+<xs:element name="eliminarEstacionCResponse" type="tns:eliminarEstacionCResponse"/>
+
+<xs:element name="eliminarRuta" type="tns:eliminarRuta"/>
+
+<xs:element name="eliminarRutaResponse" type="tns:eliminarRutaResponse"/>
+
+<xs:element name="modificarChofer" type="tns:modificarChofer"/>
+
+<xs:element name="modificarChoferResponse" type="tns:modificarChoferResponse"/>
+
+<xs:element name="modificarEstacionC" type="tns:modificarEstacionC"/>
+
+<xs:element name="modificarEstacionCResponse" type="tns:modificarEstacionCResponse"/>
+
+<xs:element name="obtenerG" type="tns:obtenerG"/>
+
+<xs:element name="obtenerGResponse" type="tns:obtenerGResponse"/>
+
+<xs:element name="obtenerc" type="tns:obtenerc"/>
+
+<xs:element name="obtenercResponse" type="tns:obtenercResponse"/>
+
+<xs:element name="obtenerestaciontemp" type="tns:obtenerestaciontemp"/>
+
+<xs:element name="obtenerestaciontempResponse" type="tns:obtenerestaciontempResponse"/>
+
+<xs:element name="obtenertamanoG" type="tns:obtenertamanoG"/>
+
+<xs:element name="obtenertamanoGResponse" type="tns:obtenertamanoGResponse"/>
+
+<xs:element name="obtenertamanoc" type="tns:obtenertamanoc"/>
+
+<xs:element name="obtenertamanocResponse" type="tns:obtenertamanocResponse"/>
+
+<xs:element name="obtenertamanotemp" type="tns:obtenertamanotemp"/>
+
+<xs:element name="obtenertamanotempResponse" type="tns:obtenertamanotempResponse"/>
+
+<xs:complexType name="AgregarEstacionG">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="contra" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="AgregarEstacionGResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="AgregarBus">
+<xs:sequence>
+<xs:element name="id" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="AgregarBusResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ModificarEstaciong">
+<xs:sequence>
+<xs:element name="idantiguo" type="xs:int"/>
+<xs:element name="idnuevo" type="xs:int"/>
+<xs:element name="nombrenuevo" type="xs:string" minOccurs="0"/>
+<xs:element name="contranuevo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ModificarEstaciongResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="obtenerestaciontemp">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="obtenerestaciontempResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="obtenertamanotemp">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="obtenertamanotempResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ModificarAdmi">
+<xs:sequence>
+<xs:element name="correoAntiguo" type="xs:string" minOccurs="0"/>
+<xs:element name="correoNuevo" type="xs:string" minOccurs="0"/>
+<xs:element name="contraNuevo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ModificarAdmiResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="AgregarEstacionC">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="contra" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="AgregarEstacionCResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="obtenerc">
+<xs:sequence>
+<xs:element name="pos" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="obtenercResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="AgregarAdministrador">
+<xs:sequence>
+<xs:element name="correo" type="xs:string" minOccurs="0"/>
+<xs:element name="contra" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="AgregarAdministradorResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eliminarChofer">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eliminarChoferResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="obtenertamanoc">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="obtenertamanocResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="EliminarAdministrador">
+<xs:sequence>
+<xs:element name="correo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="EliminarAdministradorResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eliminarEstacionC">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eliminarEstacionCResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="modificarChofer">
+<xs:sequence>
+<xs:element name="idviejo" type="xs:int"/>
+<xs:element name="idnuevo" type="xs:int"/>
+<xs:element name="nombrenuevo" type="xs:string" minOccurs="0"/>
+<xs:element name="apellidonuevo" type="xs:string" minOccurs="0"/>
+<xs:element name="contranuevo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="modificarChoferResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="agregarestaciontemp">
+<xs:sequence>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="agregarestaciontempResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="AgregarChofer">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="apellido" type="xs:string" minOccurs="0"/>
+<xs:element name="contra" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="AgregarChoferResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="EliminarBus">
+<xs:sequence>
+<xs:element name="id" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="EliminarBusResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="agregarRuta">
+<xs:sequence>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="agregarRutaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Login">
+<xs:sequence>
+<xs:element name="id" type="xs:string" minOccurs="0"/>
+<xs:element name="contra" type="xs:string" minOccurs="0"/>
+<xs:element name="tipo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="LoginResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="obtenerG">
+<xs:sequence>
+<xs:element name="pos" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="obtenerGResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="obtenertamanoG">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="obtenertamanoGResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="AsignarBusChofer">
+<xs:sequence>
+<xs:element name="idbus" type="xs:int"/>
+<xs:element name="idruta" type="xs:int"/>
+<xs:element name="idchofer" type="xs:int"/>
+<xs:element name="horainicio" type="xs:string" minOccurs="0"/>
+<xs:element name="horafinal" type="xs:string" minOccurs="0"/>
+<xs:element name="fecha" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="AsignarBusChoferResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="EliminarEstacionG">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="EliminarEstacionGResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eliminarRuta">
+<xs:sequence>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eliminarRutaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ObtenerDot">
+<xs:sequence>
+<xs:element name="tipo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ObtenerDotResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GraficarLista">
+<xs:sequence>
+<xs:element name="tipo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GraficarListaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="DibujarArbol">
+<xs:sequence>
+<xs:element name="tipo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="DibujarArbolResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="modificarEstacionC">
+<xs:sequence>
+<xs:element name="idviejo" type="xs:int"/>
+<xs:element name="idnuevo" type="xs:int"/>
+<xs:element name="nombrenuevo" type="xs:string" minOccurs="0"/>
+<xs:element name="contranuevo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="modificarEstacionCResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

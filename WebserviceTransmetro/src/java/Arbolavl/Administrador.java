@@ -10,7 +10,7 @@ package Arbolavl;
  * @author javier
  */
 public class Administrador {
-    int id;
+    int id=0;
     String correo;
     String contra;
     int fe;
@@ -34,4 +34,22 @@ public class Administrador {
         System.out.println(c);
         return c;
     }
+
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+
+    public String getContra() {
+        return contra;
+    }
+
+    public void setContra(String contra) {
+        this.contra = contra;
+    }
+    
+    
 }

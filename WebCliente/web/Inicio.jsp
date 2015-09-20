@@ -3,7 +3,55 @@
     Created on : 27-ago-2015, 0:55:41
     Author     : javier
 --%>
+<%String dato= (String)request.getAttribute("mensaje2");
+String error;
+if(dato==null){
+    error="";
+}else{
+    error=(String)request.getAttribute("mensaje2");
+}
 
+String dato1= (String)request.getAttribute("mensaje3");
+String error2;
+if(dato1==null){
+    error2="";
+}else{
+    error2=(String)request.getAttribute("mensaje3");
+     response.sendRedirect("chofer.jsp");
+}
+
+String dato2= (String)request.getAttribute("mensaje4");
+String error3;
+if(dato2==null){
+    error3="";
+}else{
+    error3=(String)request.getAttribute("mensaje4");
+}
+
+String dato5= (String)request.getAttribute("mensaje5");
+String error5;
+if(dato5==null){
+    error5="";
+}else{
+    error5=(String)request.getAttribute("mensaje5");
+}
+
+String dato6= (String)request.getAttribute("mensaje6");
+String error6;
+if(dato6==null){
+    error6="";
+}else{
+    error6=(String)request.getAttribute("mensaje6");
+}
+
+String dato7= (String)request.getAttribute("mensaje7");
+String error7;
+if(dato7==null){
+    error7="";
+}else{
+    error7=(String)request.getAttribute("mensaje7");
+}
+%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html class="no-js" lang="en"> <!--<![endif]-->
@@ -24,7 +72,8 @@
     ================================================== -->
    <link rel="stylesheet" href="css/base.css">
 	<link rel="stylesheet" href="css/main.css">
-   <link rel="stylesheet" href="css/media-queries.css">         
+   <link rel="stylesheet" href="css/media-queries.css">     
+   
 
    <!-- Script
    =================================================== -->
@@ -35,6 +84,7 @@
 </head>
 
 <body class="homepage">
+   
 
    <div id="preloader"> 
 	   <div id="status">
@@ -66,9 +116,10 @@
 		         <li><a class="smoothscroll" href="#portfolio">Administrador.</a></li>
 	            <li><a class="smoothscroll" href="#services">Estacion Clave.</a></li>
 	            <li><a class="smoothscroll" href="#about">Estacion General.</a></li>
-	            <li><a class="smoothscroll" href="#journal">Bus.</a></li>	            
-	            <li><a class="smoothscroll" href="#content">Chofer.</a></li>
-                     <li><a class="smoothscroll" href="#contact">Ruta.</a></li>
+	            <li><a  href="ModuloBus.jsp">Bus.</a></li>	            
+	            <li><a href="ModuloChofer.jsp">Chofer.</a></li>
+                     <li><a href="ModuloRuta.jsp">Ruta.</a></li>
+                      <li><a href="Login.jsp">Volver.</a></li>
 	         </ul> 
 
 	      </nav> <!-- /nav-wrap -->	      
@@ -94,7 +145,7 @@
 					   <li>
 						   <div class="flex-caption">
 								<h1 >Hola Bienvenido a sistema de Buses Transmetro de la ciudad capital de Guatemala.</h1>	
-																							   
+						     <p><a class="button" href="AsignacionBus.jsp">Comienza asignar buses</a></p>														   
 							</div>						
 					   </li>
 
@@ -112,7 +163,13 @@
 								<h1 >Aqui lograras registrar buses,choferes asi mismo la ruta que van a realizar cada uno.</h1>
 																	   
 							</div>
-					   </li>					              
+					   </li>	
+                                           <li>
+						   <div class="flex-caption">
+								<h1 >Presiona el boton y mira los graficos de las estructuras.</h1>
+								 <p><a class="button" href="Graficos.jsp">Ingresar a Graficos</a></p>																   
+							</div>
+					   </li>	
 
 				   </ul>
 
@@ -124,13 +181,13 @@
 
    </section> <!-- #hero -->
 
-
    <!-- Portfolio
    ================================================== -->
    <section id="portfolio">
-       
+     
        <div class="row form-section">
            <div id="contact-form" class="twelve columns">
+               <form action="control.jsp" method="post" name="agr">
                 <div class="row" align="center" >
                     <h1>Modulo de Administrador</h1>
                     
@@ -145,28 +202,31 @@
                </div>
                <br/>
                <div class="row" align="center">
-                      <input type="submit" value="Agregar Datos"/>
-                     <div id="image-loader">
-                        <img src="images/loader.gif" alt="">
-                     </div>     
-                     &nbsp
-                      
-                     
+                      <input type="submit" value="Agregar Datos" name="boton1"/>    
+                      <p><%=error %></p>
                   </div>
+               
+              
                 <br/>
-                <div class="row" align="center" >
+         <div class="row" align="center" >
+                     
                      <h3>Eliminaciòn.</h3>
-                     <HR NOSHADE>
-                      <input type="submit" value="Eliminar Correo"/>
+                     
+                     <hr/>
+                       <div class="row" align="center">
                      <div class="six columns mob-whole">               	
                             <input type="text" name="eliminarAdmi" class="eliminarAdmi" placeholder="Correo Electronico " size="35"/>
                      </div>
-        
+                              <div class="six columns mob-whole"> 
+                      <input type="submit" value="Eliminar Correo" name="boton2"/>
+                        </div>
+                    </div>
+                     <p><%=error2 %></p>
                 </div>
-               
+      </form>
            </div>
        </div>  
-      
+
    </section> <!-- /Portfolio -->
 
 
@@ -177,7 +237,7 @@
    	<div class="row form-section">
 
    		<div id="contact-form" class="twelve columns">
-                    
+                <form name="agregarec" action="control.jsp" method="post">
 	        <div class="row" align="center" >
                     <h1>Modulo de Estacion Clave</h1>
                      <h3>Agregacion.</h3>
@@ -188,7 +248,6 @@
                      <div class="six columns mob-whole">               	
                             <input type="text" name="nombreEstacionC" class="nombreEstacionC" placeholder="Nombre" size="35"/>
                      </div>
-                     
                </div>
                <br/>
                <div class="row" align="center" >
@@ -196,23 +255,26 @@
                </div>
                <br/>
                <div class="row" align="center">
-                      <input type="submit" value="Agregar Datos"/>
+                      <input type="submit" value="Agregar Datos" name="boton3"/>
+               </div>
+               <div class="row" align="center">
+               <p><%=error3 %></p>
                </div>
                <br/>
                 <div class="row" align="center" >
                      <h3>Eliminaciòn.</h3>
                      <HR NOSHADE>
-                      <input type="submit" value="Eliminar Estacion"/>
+                      <input type="submit" value="EliminarEstacion" name="boton4"/>
                      <div class="six columns mob-whole">               	
                             <input type="text"  name="eliminarEstacionC" class="eliminarEstacionC"placeholder="Id Numerico " size="35"/>
                      </div>
-        
+                 <p><%=error5 %></p>     
                 </div>
+               </form>
          </div>
 
       </div>
 
-      
    </section> <!-- /services -->   
 
 
@@ -223,8 +285,9 @@
    	<div class="row form-section">
 
    		<div id="contact-form" class="twelve columns">
-                    
+                    <form name="agregareg" action="control.jsp" method="post">
 	        <div class="row" align="center" >
+                    
                     <h1>Modulo de Estacion General</h1>
                      <h3>Agregacion.</h3>
                      <hr />
@@ -242,138 +305,27 @@
                </div>
                <br/>
                <div class="row" align="center">
-                      <input type="submit" value="Agregar Datos"/>
+                      <input type="submit" value="Agregar Datos" name="boton6"/>
+               </div>
+               <div class="row" align="center">
+               <p><%=error6 %></p>
                </div>
                <br/>
                 <div class="row" align="center" >
                      <h3>Eliminaciòn.</h3>
                      <HR NOSHADE>
-                     <input type="submit" value="Eliminar Estacion"/>
+                     <input type="submit" value="Eliminar Estacion" name="boton7"/>
                      <div class="six columns mob-whole">               	
                             <input type="text"  name="eliminarEstacionG" class="eliminarEstacionG"placeholder="Id Numerico" size="35"/>
                      </div>
-        
+                      <p><%=error7 %></p>
                 </div>
+                    </form>
          </div>
 
       </div>
 
    </section> <!-- /about -->
-
-
-   <!-- journal
-   =================================================== -->
-   <section id="journal">
-
-	   <div class="row form-section">
-
-	   	<div class="twelve columns">
-
-			<div class="row" align="center" >
-                    <h1>Modulo de Buses</h1>
-                     <h3>Agregacion.</h3>
-                     <hr />
-                     <div class="six columns mob-whole">               	
-                            <input type="text" name="idBus"  placeholder="Id Numerico" size="35"/>
-                     </div>
-                     
-               </div>
-               <br/>
-               <div class="row" align="center">
-                      <input type="submit" value="Agregar Datos"/>
-               </div>
-               <br/>
-                <div class="row" align="center" >
-                     <h3>Eliminaciòn.</h3>
-                     <HR NOSHADE>
-                     <input type="submit" value="EliminarBus"/>
-                     <div class="six columns mob-whole">               	
-                            <input type="text"  name="eliminarBus" placeholder="Id Numerico" size="35"/>
-                     </div>
-        
-                </div>         
-
-		    </div>
-
-	   </div>
-
-
-   </section> <!-- /blog -->
-
-   <section id="content">
-      <br/>
-      <div class="row form-section">
-
-	   	<div class="twelve columns">
-
-			<div class="row" align="center" >
-                    <h1>Modulo de Choferes</h1>
-                     <h3>Agregacion.</h3>
-                     <hr />
-                     <div class="six columns mob-whole">               	
-                            <input type="text" name="idChofer"  placeholder="Id Numerico" size="35"/>
-                     </div>
-                     <div class="six columns mob-whole">               	
-                            <input type="password" name="contraChofer"  placeholder="Password" size="35"/>
-                     </div>
-                     
-               </div>
-               <br/>
-               <div class="row" align="center" >
-                     <div class="six columns mob-whole">               	
-                            <input type="text" name="nombreChofer"  placeholder="Nombre" size="35"/>
-                     </div>
-                     <div class="six columns mob-whole">               	
-                            <input type="text" name="apellidoChofer"  placeholder="Apellido" size="35"/>
-                     </div>
-               </div>
-               <br/>
-               <div class="row" align="center">
-                      <input type="submit" value="Agregar Datos"/>              
-               </div>
-               <br/>
-                <div class="row" align="center" >
-                     <h3>Eliminaciòn.</h3>
-                     <hr />           
-                     <div class="six columns mob-whole">   
-                     <input type="submit" value="EliminarChofer"/>
-                     </div>
-                     <div class="six columns mob-whole">   
-                     <input type="text"  name="eliminarChofer" class="eliminarEstacionG"placeholder="Id Numerico" size="35" align="center" />
-                     </div>
-                 </div>
-
-		    </div>
-
-	   </div>
-   </section>
-   
-   <!-- Contact Section
-   ================================================== -->
-   <section id="contact">
-    <div class="row form-section">
-
-                 <div class="twelve columns">
-
-			<div class="row" align="center" >
-                    <h1>Modulo de Rutas</h1>
-                     <h3>Agregacion.</h3>
-                     <hr />
-                     <div class="six columns mob-whole">               	
-                            <input type="text" name="NombreRuta"  placeholder="Nombre" size="35"/>
-                     </div>
-                     <div class="row" align="center">
-                      <input type="submit" value="Agregar Datos"/>              
-               </div>
-               </div>
-
-
-      </div>
-   	
-      
-
-   </section>  <!-- /contact-->
-
 
   
    <!-- Footer
@@ -381,7 +333,7 @@
    <footer>			
 				<h3>Milton Navarro USAC</h3>
                               
-  <img src="images/ArbolAdmi.jpg" width="1875" height="2847" alt="ArbolAdmi" name="imagen1" id="imagen1"/>
+  <img src="http://localhost:8080/MY-APP/img/ArbolAdmi.jpg" width="1875" height="2847" alt="" name="imagen1" id="imagen1"/>
 
    </footer> <!-- /footer -->
 

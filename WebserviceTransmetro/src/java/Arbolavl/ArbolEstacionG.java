@@ -14,6 +14,7 @@ import java.io.IOException;
  * @author javier
  */
 public class ArbolEstacionG {
+      public ListaG ge= new ListaG();
     private EstacionGeneral raiz;
     int numero;
     int numero2;
@@ -327,6 +328,8 @@ public class ArbolEstacionG {
       public EstacionGeneral buscar(int id, EstacionGeneral r){
         if(raiz==null){
             return null;
+        }else if(r==null){
+            return r;
         }else if(r.id==id){
             return r;
         }
@@ -370,8 +373,9 @@ public static String getDotFile(ArbolEstacionG t){
   sb.append("edge [arrowsize=0.8];\n");
   
   StringBuilder treeContent = getDotTreeContent(new StringBuilder(), t.getRaiz(), 1);
+  if(treeContent!=null){
   sb.append(treeContent);
-  
+  }
   sb.append("}");
   
   return sb.toString();
@@ -379,7 +383,8 @@ public static String getDotFile(ArbolEstacionG t){
 
 
 private static StringBuilder getDotTreeContent(StringBuilder sb, EstacionGeneral n, int i){
-    sb.append(String.format("node%d [label=\"%s\"];\n", i, "Id"+n.id+"Nombre"+n.nombre+" Password: "+n.contra));
+    if(n!=null){
+    sb.append(String.format("node%d [label=\"%s\"];\n", i, "IdNumerico:"+n.id+" Nombre:"+n.nombre+" Password: "+n.contra));
   int lChild = 2*i;
   int rChild = 2*i + 1;
   //codigo personalizado
@@ -392,6 +397,9 @@ private static StringBuilder getDotTreeContent(StringBuilder sb, EstacionGeneral
     getDotTreeContent(sb, n.hijoDerecho, rChild);
   }
   return sb;
+    }else{
+        return null;
+    }
 }
 
  public void generartxt(String estructura){
@@ -405,4 +413,15 @@ private static StringBuilder getDotTreeContent(StringBuilder sb, EstacionGeneral
 
             }
 	}
+ 
+  public void recorrerPostOrdenM(EstacionGeneral x){
+          if(x!=null){
+           recorrerPostOrdenM(x.hijoIzquierdo);
+           recorrerPostOrdenM(x.hijoDerecho);
+            ge.agregar(new G(x.nombre));
+          }else{
+              
+          }
+          
+      }
 }

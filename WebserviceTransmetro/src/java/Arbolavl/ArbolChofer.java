@@ -317,6 +317,8 @@ public class ArbolChofer {
       public Chofer buscar(int id, Chofer r){
         if(raiz==null){
             return null;
+        }else if(r==null){
+            return r;
         }else if(r.id==id){
             return r;
         }
@@ -347,7 +349,44 @@ public class ArbolChofer {
         
     }
      
-     
-     
+    public static String getDotFile(ArbolChofer t){
+  StringBuilder sb = new StringBuilder();
+  sb.append("digraph G {\n");//escribiendo en sintaxis dot
+  sb.append("graph [ dpi = 250 ]\n"); 
+  sb.append("nodesep=0.3;\n");
+  sb.append("ranksep=0.2;\n");
+  sb.append("margin=0.1;\n");
+  sb.append("node [shape=circle];\n");
+  sb.append("edge [arrowsize=0.8];\n");
+  
+  StringBuilder treeContent = getDotTreeContent(new StringBuilder(), t.getRaiz(), 1);
+  if(treeContent!=null){
+  sb.append(treeContent);
+  }
+  sb.append("}");
+  
+  return sb.toString();
+}
+
+
+private static StringBuilder getDotTreeContent(StringBuilder sb, Chofer n, int i){
+    if(n!=null){
+    sb.append(String.format("node%d [label=\"%s\"];\n", i, "NoIdentifiacion:"+n.id+"  Nombre:"+n.nombre+"  Apellido:"+n.apellido+" Password: "+n.contra));
+  int lChild = 2*i;
+  int rChild = 2*i + 1;
+  //codigo personalizado
+  if(n.hijoIzquierdo  != null){
+    sb.append(String.format("node%d -> node%d;\n", i, lChild));
+    getDotTreeContent(sb, n.hijoIzquierdo, lChild);
+  }//xppppp
+  if(n.hijoDerecho != null){
+    sb.append(String.format("node%d -> node%d;\n", i, rChild));
+    getDotTreeContent(sb, n.hijoDerecho, rChild);
+  }
+  return sb;
+    }else{
+        return null;
+    }
+}
      
 }

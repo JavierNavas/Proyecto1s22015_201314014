@@ -10,13 +10,13 @@ package Arbolavl;
  * @author javier
  */
 public class EstacionPasar {
-     EstacionPasar siguiente;
-     EstacionPasar anterior;
-     String nombreRuta;
+     public EstacionPasar siguiente;
+     public EstacionPasar anterior;
+     public String nombreEstacion;
 
-    public EstacionPasar(String nombreRuta) {
+    public EstacionPasar(String nombreEstacion) {
         this.siguiente =null;
         this.anterior =null;
-        this.nombreRuta=nombreRuta;
+        this.nombreEstacion=nombreEstacion;
     }
 }

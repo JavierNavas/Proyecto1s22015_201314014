@@ -30,7 +30,7 @@ public class ArbolAdmin {
         return raiz;
     }
     
-    //Insertar
+    //
     public boolean insertar(String correo,String contra) {
 
      Administrador nuevo= new Administrador(correo,contra);
@@ -204,9 +204,9 @@ public class ArbolAdmin {
    }
  
  
-   public boolean eliminar(String correo) {
+   public boolean eliminar(String correo,Administrador r) {
     numero=tamaContra(correo);
-    eliminarAVL(this.raiz,numero);
+    eliminarAVL(r,numero);
     if(error.equals("error")){
          error="";
          return false;
@@ -219,7 +219,7 @@ public class ArbolAdmin {
         for (int x=0;x<dato.length();x++){
               c=c+dato.codePointAt(x);
         }
-        System.out.println(c);
+        System.out.println("tama corrreo:"+c);
         return c;
     }
       
@@ -332,6 +332,8 @@ public class ArbolAdmin {
         numero= tamaContra(contra);
         if(raiz==null){
             return null;
+        }else if(r==null){
+            return r;
         }else if(r.id==numero){
             return r;
         }
@@ -339,7 +341,7 @@ public class ArbolAdmin {
             return buscar(contra,r.hijoDerecho);
         }else if(r.id>numero){
             return buscar(contra,r.hijoIzquierdo);
-        }else{
+        }else {
             return null;
         }
         
@@ -348,7 +350,7 @@ public class ArbolAdmin {
      
       public boolean Modificar(String correoAntiguo,String nuevocorreo,String con){
         Administrador temp = buscar(correoAntiguo,raiz);
-        if(eliminar(correoAntiguo)){
+        if(eliminar(correoAntiguo,this.raiz)){
             if(insertar(nuevocorreo,con)){
                 //se modifico con exito
             }else{
@@ -375,8 +377,9 @@ public static String getDotFile(ArbolAdmin t){
   sb.append("edge [arrowsize=0.8];\n");
   
   StringBuilder treeContent = getDotTreeContent(new StringBuilder(), t.getRaiz(), 1);
+  if(treeContent!=null){
   sb.append(treeContent);
-  
+  }
   sb.append("}");
   
   return sb.toString();
@@ -384,6 +387,7 @@ public static String getDotFile(ArbolAdmin t){
 
 
 private static StringBuilder getDotTreeContent(StringBuilder sb, Administrador n, int i){
+    if(n!=null){
     sb.append(String.format("node%d [label=\"%s\"];\n", i, "Correo:"+n.correo+" Password: "+n.contra));
   int lChild = 2*i;
   int rChild = 2*i + 1;
@@ -397,6 +401,9 @@ private static StringBuilder getDotTreeContent(StringBuilder sb, Administrador n
     getDotTreeContent(sb, n.hijoDerecho, rChild);
   }
   return sb;
+    }else{
+        return null;
+    }
 }
 
  public void generartxt(String estructura){

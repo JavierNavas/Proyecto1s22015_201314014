@@ -143,4 +143,29 @@ public class ListaRuta {
 	    	return null;
     }
     
+       public boolean existe(String nombre){
+        Ruta aux = inicio;
+        while(aux!=null){
+                if(aux.nombre.equals(nombre)){
+                    System.out.println("hola");
+                    return true;
+                }
+                aux= aux.siguiente;
+        }
+        return false;
+    }
+     
+      
+    public Ruta obtenerpos(int a){
+     Ruta actual = inicio;
+      for(int pos =0;pos<a;pos++){
+          if(actual != null){
+          actual = actual.siguiente;
+          }
+          else 
+              return null;
+      }
+    
+    return actual;
+ }
 }

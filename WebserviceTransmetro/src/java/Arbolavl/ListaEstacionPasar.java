@@ -63,7 +63,7 @@ public class ListaEstacionPasar {
               EstacionPasar  anterior = inicio;
            for(int i =0;i<this.tamano;i++)
            {
-               if(actual.nombreRuta.equalsIgnoreCase(nombre))
+               if(actual.nombreEstacion.equalsIgnoreCase(nombre))
                {
                    if(actual == inicio)
                    {
@@ -135,7 +135,7 @@ public class ListaEstacionPasar {
     public EstacionPasar obtener(String nombre){
 	       EstacionPasar temp=inicio;
 	    	while(temp!=null){
-	    		if (temp.nombreRuta.equals(nombre)){
+	    		if (temp.nombreEstacion.equals(nombre)){
 	    			return temp;
 	    		}
 	    		temp=temp.siguiente;
@@ -143,4 +143,32 @@ public class ListaEstacionPasar {
 	    	return null;
     }
     
+       public boolean existe(String nombre){
+         EstacionPasar aux = inicio;
+        while(aux!=null){
+                if(aux.nombreEstacion.equals(nombre)){
+                    System.out.println("hola");
+                    return true;
+                }
+                aux= aux.siguiente;
+        }
+        return false;
+    }
+     
+    public void ordenar(ListaBus lista){
+        
+    }
+      
+    public EstacionPasar obtenerpos(int a){
+     EstacionPasar actual = inicio;
+      for(int pos =0;pos<a;pos++){
+          if(actual != null){
+          actual = actual.siguiente;
+          }
+          else 
+              return null;
+      }
+    
+    return actual;
+ }
 }

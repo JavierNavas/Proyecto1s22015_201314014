@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://192.168.160.2:8080/WebserviceTransmetro/Transmetro?wsdl" uri="src/conf/xml-resources/web-service-references/Transmetro/wsdl/192.168.160.2_8080/WebserviceTransmetro/Transmetro.wsdl"/>
+    <system systemId="http://192.168.160.2:8080/WebserviceTransmetro/Transmetro?xsd=1" uri="src/conf/xml-resources/web-service-references/Transmetro/wsdl/192.168.160.2_8080/WebserviceTransmetro/Transmetro.xsd_1.xsd"/>
+</catalog>

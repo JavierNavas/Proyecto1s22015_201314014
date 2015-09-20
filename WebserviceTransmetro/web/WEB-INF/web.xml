@@ -4,22 +4,6 @@ Inc.//DTD Web Application 2.3//EN"
 "http://java.sun.com/j2ee/dtds/web-app_2_3.dtd">
 
 <web-app>
-<listener>
-		<listener-class>
-			com.sun.xml.ws.transport.http.servlet.WSServletContextListener
-		</listener-class>
-	</listener>
-	<servlet>
-		<servlet-name>Transmetro</servlet-name>
-		<servlet-class>
-			com.sun.xml.ws.transport.http.servlet.WSServlet
-		</servlet-class>
-		<load-on-startup>1</load-on-startup>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>Transmetro</servlet-name>
-		<url-pattern>/Transmetro</url-pattern>
-	</servlet-mapping>
 	<session-config>
 		<session-timeout>30</session-timeout>
 	</session-config>
