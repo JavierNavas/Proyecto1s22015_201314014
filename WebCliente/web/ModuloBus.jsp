@@ -180,7 +180,52 @@
     %>
                   
                       </div>
-                </div>         
+                </div>   
+    <div class="row" align="center" >
+                 <h3>Modificacion.</h3>
+                </div>    
+                     <hr/>
+    <div class="row" align="center" >
+    <div class="six columns mob-whole">               	
+                            <input type="text" name="idviego" class="eliminarAdmi" placeholder="Id Viejo " size="35"/>
+                     </div>
+                     <div class="six columns mob-whole">               	
+                            <input type="text" name="idnuev" class="eliminarAdmi" placeholder="Id Nuevo " size="35"/>
+                     </div>
+                     <div class="row" align="center" >
+                    <div class="six columns mob-whole"> 
+                      <input type="submit" value="Modificar Bus" name="boton22"/>
+                        </div>
+                     </div>
+    <%
+        if (request.getParameter("boton22") != null)
+        {
+            String iviejo=request.getParameter("idviego");
+            String inuevo=request.getParameter("idnuev");
+    try {
+	transmetro.ControlTransmetro_Service service = new transmetro.ControlTransmetro_Service();
+	transmetro.ControlTransmetro port = service.getControlTransmetroPort();
+	 // TODO initialize WS operation arguments here
+	int idviejo = Integer.parseInt(iviejo);
+	int idnuevo = Integer.parseInt(inuevo);
+	// TODO process result here
+	boolean result = port.modificarbus(idviejo, idnuevo);
+	if(result){
+            %>
+             <script>alert("Se Modifico correctamante");</script>
+            <%
+        }else{
+            %>
+             <script>alert("Error No se Modifico");</script>
+            <%
+        }
+    } catch (Exception ex) {
+	// TODO handle custom exceptions here
+    }
+        }
+    %>
+    </div>
+    
                    </form>
 	   </div>
    	

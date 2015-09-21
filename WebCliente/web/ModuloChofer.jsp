@@ -135,15 +135,15 @@
     <%
         if (request.getParameter("boton10") != null)
         {
+             String nombre=request.getParameter("nombreChofer");
+            String apellido=request.getParameter("apellidoChofer");
+            String contra=request.getParameter("contraChofer");
     try {
 	transmetro.ControlTransmetro_Service service = new transmetro.ControlTransmetro_Service();
 	transmetro.ControlTransmetro port = service.getControlTransmetroPort();
 	 // TODO initialize WS operation arguments here
         String ids=request.getParameter("idChofer");
 	int id = Integer.parseInt(ids);
-	java.lang.String nombre = "nombreChofer";
-	java.lang.String apellido = "apellidoChofer";
-	java.lang.String contra = "contraChofer";
 	// TODO process result here
 	boolean result = port.agregarChofer(id, nombre, apellido, contra);
         if(result){
@@ -200,9 +200,69 @@
     }
         }
     %>
-
+</div>
+</br>
+</br>
+<div class="row" align="center" >
+                 <h3>Modificacion.</h3>
+                     <hr/>
+                       <div class="row" align="center">
+                     <div class="six columns mob-whole">               	
+                            <input type="text" name="modificarooooo" class="eliminarAdmi" placeholder="Id Antiguo " size="35"/>
                      </div>
-	      </div> <!-- /nine -->
+                     <div class="six columns mob-whole">               	
+                            <input type="text" name="modificarppppp" class="eliminarAdmi" placeholder="Id nuevo " size="35"/>
+                     </div>
+                      <div class="six columns mob-whole">               	
+                            <input type="text" name="modificarnnnn" class="eliminarAdmi" placeholder="nombre nuevo " size="35"/>
+                     </div>
+                     <div class="six columns mob-whole">               	
+                            <input type="text" name="modifica" class="eliminarAdmi" placeholder="Apellido nuevo " size="35"/>
+                     </div>
+                     <div class="six columns mob-whole">               	
+                            <input type="text" name="modificarcoccct" class="eliminarAdmi" placeholder="Password nuevo " size="35"/>
+                     </div>
+                     
+                    <div class="six columns mob-whole"> 
+                      <input type="submit" value="Modificar Chofer" name="boton22"/>
+                        </div>
+    <%
+            if (request.getParameter("boton22") != null)
+        {
+             String iviejo=request.getParameter("modificarooooo");
+            String inuevo=request.getParameter("modificarppppp");
+            String nombrenuevo=request.getParameter("modificarnnnn");
+            String apellidonuevo=request.getParameter("modifica");
+            String contranuevo=request.getParameter("modificarcoccct");
+    try {
+	transmetro.ControlTransmetro_Service service = new transmetro.ControlTransmetro_Service();
+	transmetro.ControlTransmetro port = service.getControlTransmetroPort();
+	 // TODO initialize WS operation arguments here
+	int idviejo = Integer.parseInt(iviejo);
+	int idnuevo = Integer.parseInt(inuevo);
+	// TODO process result here
+	boolean result = port.modificarChofer(idviejo, idnuevo, nombrenuevo, apellidonuevo, contranuevo);
+	if(result){
+            %>
+             <script>alert("Se Modifico correctamante");</script>
+            <%
+        }else{
+            %>
+             <script>alert("Error No se Modifico");</script>
+            <%
+        }
+    } catch (Exception ex) {
+	// TODO handle custom exceptions here
+    }
+        }
+         
+    %>
+
+                           
+                    </div>
+                     </div>
+                     </div>
+	       <!-- /nine -->
         </form>
         </div>
    </section> <!-- /content -->  
