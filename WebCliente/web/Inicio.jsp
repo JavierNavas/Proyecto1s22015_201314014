@@ -51,6 +51,27 @@ if(dato7==null){
 }else{
     error7=(String)request.getAttribute("mensaje7");
 }
+String dato8= (String)request.getAttribute("mensaje8");
+String error8;
+if(dato8==null){
+    error8="";
+}else{
+    error8=(String)request.getAttribute("mensaje8");
+}
+String dato9= (String)request.getAttribute("mensaje9");
+String error9;
+if(dato9==null){
+    error9="";
+}else{
+    error9=(String)request.getAttribute("mensaje9");
+}
+String dato10= (String)request.getAttribute("mensaje10");
+String error10;
+if(dato10==null){
+    error10="";
+}else{
+    error10=(String)request.getAttribute("mensaje10");
+}
 %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -224,9 +245,9 @@ if(dato7==null){
                      <p><%=error2 %></p>
                 </div>
                 
-                
+                <div class="row" align="center" >
                  <h3>Modificacion.</h3>
-                     
+                </div>    
                      <hr/>
                        <div class="row" align="center">
                      <div class="six columns mob-whole">               	
@@ -241,6 +262,9 @@ if(dato7==null){
                     <div class="six columns mob-whole"> 
                       <input type="submit" value="Modificar Admi" name="boton20"/>
                         </div>
+    
+                        <p><%=error8 %></p>
+                           
                     </div>
       </form>
            </div>
@@ -289,6 +313,31 @@ if(dato7==null){
                      </div>
                  <p><%=error5 %></p>     
                 </div>
+                
+                 <div class="row" align="center" >
+                 <h3>Modificacion.</h3>
+                </div>    
+                     <hr/>
+                       <div class="row" align="center">
+                     <div class="six columns mob-whole">               	
+                            <input type="text" name="modificaridantiguo" class="eliminarAdmi" placeholder="Id Antiguo " size="35"/>
+                     </div>
+                     <div class="six columns mob-whole">               	
+                            <input type="text" name="modificaridnuevo" class="eliminarAdmi" placeholder="Id nuevo " size="35"/>
+                     </div>
+                      <div class="six columns mob-whole">               	
+                            <input type="text" name="modificarnombre" class="eliminarAdmi" placeholder="nombre nuevo " size="35"/>
+                     </div>
+                     <div class="six columns mob-whole">               	
+                            <input type="text" name="modificarcontraest" class="eliminarAdmi" placeholder="Password nuevo " size="35"/>
+                     </div>
+                    <div class="six columns mob-whole"> 
+                      <input type="submit" value="Modificar Estacion Clave" name="boton21"/>
+                        </div>
+    
+                        <p><%=error9 %></p>
+                           
+                    </div>
                </form>
          </div>
 
@@ -339,6 +388,31 @@ if(dato7==null){
                      </div>
                       <p><%=error7 %></p>
                 </div>
+                
+                <div class="row" align="center" >
+                 <h3>Modificacion.</h3>
+                </div>    
+                     <hr/>
+                       <div class="row" align="center">
+                     <div class="six columns mob-whole">               	
+                            <input type="text" name="modificarooooo" class="eliminarAdmi" placeholder="Id Antiguo " size="35"/>
+                     </div>
+                     <div class="six columns mob-whole">               	
+                            <input type="text" name="modificarppppp" class="eliminarAdmi" placeholder="Id nuevo " size="35"/>
+                     </div>
+                      <div class="six columns mob-whole">               	
+                            <input type="text" name="modificarnnnn" class="eliminarAdmi" placeholder="nombre nuevo " size="35"/>
+                     </div>
+                     <div class="six columns mob-whole">               	
+                            <input type="text" name="modificarcoccct" class="eliminarAdmi" placeholder="Password nuevo " size="35"/>
+                     </div>
+                    <div class="six columns mob-whole"> 
+                      <input type="submit" value="Modificar Estacion General" name="boton22"/>
+                        </div>
+    
+                        <p><%=error10 %></p>
+                           
+                    </div>
                     </form>
          </div>
 
@@ -352,7 +426,6 @@ if(dato7==null){
    <footer>			
 				<h3>Milton Navarro USAC</h3>
                               
-  <img src="http://localhost:8080/MY-APP/img/ArbolAdmi.jpg" width="1875" height="2847" alt="" name="imagen1" id="imagen1"/>
 
    </footer> <!-- /footer -->
 

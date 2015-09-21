@@ -168,6 +168,83 @@
             }
        
         }
+    else if (request.getParameter("boton20") != null)
+        {
+    try {
+        String correoAntiguo=request.getParameter("modificarAdmi");
+                String correoNuevo=request.getParameter("modificarAdmico");
+                        String contraNuevo=request.getParameter("modificarcontra");
+	transmetro.ControlTransmetro_Service service = new transmetro.ControlTransmetro_Service();
+	transmetro.ControlTransmetro port = service.getControlTransmetroPort();
+	 // TODO initialize WS operation arguments here
+
+	// TODO process result here
+	boolean result = port.modificarAdmi(correoAntiguo, correoNuevo, contraNuevo);
+	if(result){
+           request.setAttribute("mensaje8","Modificado Correctamente");
+            request.getRequestDispatcher("Inicio.jsp").forward(request, response);
+        }else{
+            request.setAttribute("mensaje8","Error no se modifico");
+            request.getRequestDispatcher("Inicio.jsp").forward(request, response);
+        }
+    } catch (Exception ex) {
+	// TODO handle custom exceptions here
+    }
+        }
+    else if (request.getParameter("boton21") != null)
+        {
+            String iviejo=request.getParameter("modificaridantiguo");
+            String inuevo=request.getParameter("modificaridnuevo");
+            String nombrenuevo=request.getParameter("modificarnombre");
+            String contranuevo=request.getParameter("modificarcontraest");
+      try {
+	transmetro.ControlTransmetro_Service service = new transmetro.ControlTransmetro_Service();
+	transmetro.ControlTransmetro port = service.getControlTransmetroPort();
+	 // TODO initialize WS operation arguments here
+	int idviejo = Integer.parseInt(iviejo);
+	int idnuevo = Integer.parseInt(inuevo);
+	// TODO process result here
+	boolean result = port.modificarEstacionC(idviejo, idnuevo, nombrenuevo, contranuevo);
+	if(result){
+           request.setAttribute("mensaje9","Modificado Correctamente");
+            request.getRequestDispatcher("Inicio.jsp").forward(request, response);
+        }else{
+            request.setAttribute("mensaje9","Error no se modifico");
+            request.getRequestDispatcher("Inicio.jsp").forward(request, response);
+        }
+    } catch (Exception ex) {
+	// TODO handle custom exceptions here
+    }
+
+        }
+        else if (request.getParameter("boton22") != null)
+        {
+            String antiguo=request.getParameter("modificarooooo");
+            String nuevo=request.getParameter("modificarppppp");
+            String nombrenuevo=request.getParameter("modificarnnnn");
+            String contranuevo=request.getParameter("modificarcoccct");
+    try {
+	transmetro.ControlTransmetro_Service service = new transmetro.ControlTransmetro_Service();
+	transmetro.ControlTransmetro port = service.getControlTransmetroPort();
+	 // TODO initialize WS operation arguments here
+	int idantiguo = Integer.parseInt(antiguo);
+	int idnuevo = Integer.parseInt(nuevo);
+	// TODO process result here
+	boolean result = port.modificarEstaciong(idantiguo, idnuevo, nombrenuevo, contranuevo);
+	if(result){
+           request.setAttribute("mensaje10","Modificado Correctamente");
+            request.getRequestDispatcher("Inicio.jsp").forward(request, response);
+        }else{
+            request.setAttribute("mensaje10","Error no se modifico");
+            request.getRequestDispatcher("Inicio.jsp").forward(request, response);
+        }
+    } catch (Exception ex) {
+	// TODO handle custom exceptions here
+    }
+
+
+        }
+
      %>
     </body>
 </html>
