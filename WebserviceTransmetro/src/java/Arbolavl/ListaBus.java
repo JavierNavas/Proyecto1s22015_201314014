@@ -173,4 +173,37 @@ public class ListaBus {
     
     return actual;
  }
+    
+    public String imprimirbus(){
+        String dot="";
+        if(this.inicio!=null){
+        for (int i = 0; i <this.tamano(); i++){
+	             dot=dot+"IdNumerico Bus : "+obtenerpos(i).id;
+	         if(obtenerpos(i).siguiente==null){
+	        	 dot=dot+";";
+	         }
+	         else{
+	        	 dot=dot+"--";
+	         }
+    }
+         return dot;
+        }else{
+            return dot;
+        }
+    }
+
+    public boolean modificar(int idviejo,int idnuevo){
+         Bus temp = obtener(idviejo);
+          eliminar(idviejo);
+          if(existe(idnuevo)){
+              agregar(temp);
+              return false;
+          }else{
+              Bus nuevo = new Bus(idnuevo);
+              agregar(nuevo);
+              return true;
+          }
+
+            
+    }
 }

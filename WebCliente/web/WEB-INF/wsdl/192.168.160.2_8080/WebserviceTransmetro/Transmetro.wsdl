@@ -172,6 +172,12 @@
 <message name="obtenertamanocResponse">
 <part name="parameters" element="tns:obtenertamanocResponse"/>
 </message>
+<message name="modificarbus">
+<part name="parameters" element="tns:modificarbus"/>
+</message>
+<message name="modificarbusResponse">
+<part name="parameters" element="tns:modificarbusResponse"/>
+</message>
 <portType name="ControlTransmetro">
 <operation name="obtenertamanoG">
 <input wsam:Action="http://Transmetro/ControlTransmetro/obtenertamanoGRequest" message="tns:obtenertamanoG"/>
@@ -284,6 +290,10 @@
 <operation name="obtenertamanoc">
 <input wsam:Action="http://Transmetro/ControlTransmetro/obtenertamanocRequest" message="tns:obtenertamanoc"/>
 <output wsam:Action="http://Transmetro/ControlTransmetro/obtenertamanocResponse" message="tns:obtenertamanocResponse"/>
+</operation>
+<operation name="modificarbus">
+<input wsam:Action="http://Transmetro/ControlTransmetro/modificarbusRequest" message="tns:modificarbus"/>
+<output wsam:Action="http://Transmetro/ControlTransmetro/modificarbusResponse" message="tns:modificarbusResponse"/>
 </operation>
 </portType>
 <binding name="ControlTransmetroPortBinding" type="tns:ControlTransmetro">
@@ -532,6 +542,15 @@
 </output>
 </operation>
 <operation name="obtenertamanoc">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="modificarbus">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

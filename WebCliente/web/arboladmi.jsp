@@ -116,8 +116,7 @@
 	transmetro.ControlTransmetro port = service.getControlTransmetroPort();
 	 // TODO initialize WS operation arguments here
 	// TODO process result here
-	java.lang.String result = port.obtenerDot(tipo);
-	out.println("Result = "+result);
+	java.lang.String result = port.obtenerDot(tipo);;
         Leer leer = new Leer();
         leer.generartxt(result);
         leer.generar();

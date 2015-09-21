@@ -88,6 +88,10 @@
 
 <xs:element name="modificarEstacionCResponse" type="tns:modificarEstacionCResponse"/>
 
+<xs:element name="modificarbus" type="tns:modificarbus"/>
+
+<xs:element name="modificarbusResponse" type="tns:modificarbusResponse"/>
+
 <xs:element name="obtenerG" type="tns:obtenerG"/>
 
 <xs:element name="obtenerGResponse" type="tns:obtenerGResponse"/>
@@ -464,6 +468,19 @@
 </xs:complexType>
 
 <xs:complexType name="modificarEstacionCResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="modificarbus">
+<xs:sequence>
+<xs:element name="idviejo" type="xs:int"/>
+<xs:element name="idnuevo" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="modificarbusResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:boolean"/>
 </xs:sequence>

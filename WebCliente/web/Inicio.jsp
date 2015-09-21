@@ -223,6 +223,25 @@ if(dato7==null){
                     </div>
                      <p><%=error2 %></p>
                 </div>
+                
+                
+                 <h3>Modificacion.</h3>
+                     
+                     <hr/>
+                       <div class="row" align="center">
+                     <div class="six columns mob-whole">               	
+                            <input type="text" name="modificarAdmi" class="eliminarAdmi" placeholder="Correo Electronico Antiguo " size="35"/>
+                     </div>
+                     <div class="six columns mob-whole">               	
+                            <input type="text" name="modificarAdmico" class="eliminarAdmi" placeholder="Correo Electronico nuevo " size="35"/>
+                     </div>
+                     <div class="six columns mob-whole">               	
+                            <input type="text" name="modificarcontra" class="eliminarAdmi" placeholder="Password nuevo " size="35"/>
+                     </div>
+                    <div class="six columns mob-whole"> 
+                      <input type="submit" value="Modificar Admi" name="boton20"/>
+                        </div>
+                    </div>
       </form>
            </div>
        </div>  

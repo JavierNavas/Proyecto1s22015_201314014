@@ -293,7 +293,7 @@ public class ControlTransmetro {
         }else if(tipo.equals("EstacionGeneral")){
             return ArbolEstacionG.getDotFile(estacionGeneral);
         }else if(tipo.equals("Bus")){
-            return ArbolChofer.getDotFile(chofer);
+            return buses.imprimirbus();
         }else{
             return "";
         }
@@ -416,6 +416,21 @@ public class ControlTransmetro {
         String nombre=temp.obtenerpos(id).nombreEstacion;
         return nombre;
     }
+
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "modificarbus")
+    public boolean modificarbus(@WebParam(name = "idviejo") int idviejo, @WebParam(name = "idnuevo") int idnuevo) {
+        if(buses.modificar(idviejo, idnuevo)){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    
     
 
    
