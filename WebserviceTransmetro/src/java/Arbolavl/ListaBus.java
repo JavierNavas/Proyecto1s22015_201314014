@@ -178,7 +178,7 @@ public class ListaBus {
         String dot="";
         if(this.inicio!=null){
         for (int i = 0; i <this.tamano(); i++){
-	             dot=dot+"IdNumerico Bus : "+obtenerpos(i).id;
+	             dot=dot+"IdNumerico Bus:"+obtenerpos(i).id;
 	         if(obtenerpos(i).siguiente==null){
 	        	 dot=dot+";";
 	         }

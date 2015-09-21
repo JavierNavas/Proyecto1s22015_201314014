@@ -157,8 +157,12 @@ public class Leer {
         try {
             String file="C:\\Users\\javier\\Documents\\Bluetooth Folder\\ListaBus.txt";
             b = new BufferedWriter(new FileWriter(file));
+             b.write("graph G");
+	         b.write("{");
             b.write(estructura);
+              b.write("}");
             b.close();
+            
             } catch (IOException ex) {
 
             }
